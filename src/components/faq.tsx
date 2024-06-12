@@ -12,14 +12,9 @@ export function FAQ() {
     <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-20 bg-transparent rounded-t-[48px]">
       <div className="py-12">
         <TextAnimate
-          text="Frequently asked "
+          text="FAQ"
           type="shiftInUp"
-          className="md:text-[6rem] text-[2rem] font-bold md:leading-10 md:pb-14 tracking-tight text-orange-100 md:py-8"
-        />
-        <TextAnimate
-          text="questions. "
-          type="shiftInUp"
-          className="md:text-[6rem] text-[2rem] font-bold md:leading-10 tracking-tight text-orange-100 md:py-8 font-brand"
+          className="md:text-[6rem] text-[2rem] font-bold md:leading-10 md:pb-14 tracking-tight text-violet-200 md:py-8"
         />
       </div>
 
@@ -29,7 +24,7 @@ export function FAQ() {
       <div className="md:mx-auto">
         <Accordion
           type="multiple"
-          className="w-full md:space-y-9 bg-black/10 rounded-xl border border-orange-50/20 text-white  backdrop-blur "
+          className="w-full md:space-y-9 bg-black/10 rounded-xl border border-orange-50/20 text-black  backdrop-blur "
         >
           <AccordionItem
             value="item-1"

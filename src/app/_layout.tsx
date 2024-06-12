@@ -22,10 +22,12 @@ export default function LandingPageLayout({
   const [activeSection, setActiveSection] = useState(tabs[0].id)
 
   const heroRef = useRef(null)
+  const featureRef = useRef(null)
   const priceRef = useRef(null)
 
   const sectionRefs = {
     hero: heroRef,
+    feature: featureRef,
     price: priceRef,
   }
 
@@ -85,6 +87,11 @@ export default function LandingPageLayout({
       <main className="bg-white overflow-hidden ">
         <section id="hero" ref={heroRef}>
           <div className="h-full md:h-[900px] ">{hero}</div>
+        </section>
+        <section id="feature" ref={featureRef} className=" z-10">
+          <div className=" py-9">
+            <div className="pt-12 ">{feature}</div>
+          </div>
         </section>
         <div className="relative h-full bg-gradient-to-br from-violet-200 to-slate-900 rounded-t-[4rem]">
           <section id="price" ref={priceRef}>

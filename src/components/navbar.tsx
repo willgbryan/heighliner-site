@@ -28,6 +28,19 @@ export function Navbar({ activeSection }) {
       ),
     },
     {
+      id: "feature",
+      label: "Code",
+      icon: (
+        <CodeIcon
+          className={`h-6 w-6 ${
+            activeSection === "feature"
+              ? "text-orange-200"
+              : "text-neutral-100/60"
+          }`}
+        />
+      ),
+    },
+    {
       id: "price",
       label: "start",
       icon: (

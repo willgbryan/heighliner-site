@@ -92,8 +92,8 @@ export const OrganicButton: React.FC<OrganicShapeButtonProps> =
                       "h-full truncate flex grow justify-between items-center"
                     )}
                   >
-                    <span className="px-2  justify-between duration-400 flex w-full items-center transition-[padding] ease-in-out">
-                      <span className="text-2xl font-brand font-semibold">
+                    <span className="px-2 justify-between duration-400 flex w-full items-center transition-[padding] ease-in-out">
+                      <span className="text-2xl font-satoshi font-bold">
                         {label}
                       </span>
                     </span>

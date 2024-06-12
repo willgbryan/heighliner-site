@@ -18,7 +18,7 @@ export function Pricing() {
         <TextAnimate
           text="Pricing"
           type="shiftInUp"
-          className="text-[2.3rem] font-bold md:text-[6rem] md:font-medium tracking-tighter text-black-50"
+          className="text-[2.3rem] font-bold md:text-[6rem] md:font-semibold tracking-tighter text-neutral-300"
         />
 
         <GradientHeading size="sm" variant="lightSecondary">
@@ -27,42 +27,42 @@ export function Pricing() {
       </div>
       <div className="flex flex-col  md:flex-row items-center justify-center w-full gap-2 px-2">
       <GradientCard
-          type="standard"
-          price="1000/m"
+          type="explore"
+          price="500/m"
           textColor="text-black"
           gradient={gradients[5]}
-          description="We build one feature request at a time. Pause or cancel anytime."
+          description="Explore potential buyers with specially curated, pre-vetted leads. 10 leads per month."
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
-              <OrganicButton label="start" />
+              <OrganicButton label="explore" />
             </div>
           </div>
         </GradientCard>
         <GradientCard
-          type="standard"
+          type="refine"
           price="1000/m"
           textColor="text-black"
           gradient={gradients[5]}
-          description="We build one feature request at a time. Pause or cancel anytime."
+          description="Refine and target specific ideal customer profile requirements. 30 leads per month."
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
-              <OrganicButton label="start" />
+              <OrganicButton label="refine" />
             </div>
           </div>
         </GradientCard>
 
         <GradientCard
-          type="goblin +"
-          price="3000/m"
+          type="lock"
+          price="3000+/m"
           textColor="text-black"
           gradient={gradients[5]}
-          description="Goblin mode. In goblin mode we work faster than you can create a job posting."
+          description="Prioritize true product market fit. negotiable leads per month."
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
-              <OrganicButton label="start" />
+              <OrganicButton label="contact us" />
             </div>
           </div>
         </GradientCard>
