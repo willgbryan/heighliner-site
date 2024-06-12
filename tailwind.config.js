@@ -126,6 +126,14 @@ module.exports = {
             transform: "rotate(360deg)",
           },
         },
+        customPulse: {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: .5 },
+        },
+        customPing: {
+          '0%': { transform: 'scale(1)', opacity: 1 },
+          '75%, 100%': { transform: 'scale(2)', opacity: 0 },
+        },
         rotateIcon: {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(-90deg)" },
@@ -141,6 +149,8 @@ module.exports = {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         "spin-slow": "spin 79s linear infinite",
         "spin-medium": "spin 9s linear infinite",
+        "custom-pulse": "customPulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "custom-ping": "customPing 1s cubic-bezier(0, 0, 0.2, 1) infinite",
         "rotate-once-2s-delay": "rotateIcon 1s linear 2.1s forwards", // 1s for animation duration, 2s for delay, 1 for running once
         "rotate-once-down-2s-delay": "rotateIconDown 2s ease .75s forwards", // 1s for animation duration, 2s for delay, 1 for running once
       },

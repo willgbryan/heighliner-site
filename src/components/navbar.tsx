@@ -22,33 +22,7 @@ export function Navbar({ activeSection }) {
       icon: (
         <CultIcon
           className={`h-6 w-6 ${
-            activeSection === "hero" ? "text-orange-100" : "text-neutral-100/60"
-          }`}
-        />
-      ),
-    },
-    {
-      id: "feature",
-      label: "Code",
-      icon: (
-        <CodeIcon
-          className={`h-6 w-6 ${
-            activeSection === "feature"
-              ? "text-orange-200"
-              : "text-neutral-100/60"
-          }`}
-        />
-      ),
-    },
-    {
-      id: "testimonial",
-      label: "Ship",
-      icon: (
-        <RocketIcon
-          className={`h-6 w-6 ${
-            activeSection === "testimonial"
-              ? "text-orange-300"
-              : "text-neutral-100/60"
+            activeSection === "hero" ? "text-[#DCD7FE]" : "text-neutral-100/60"
           }`}
         />
       ),
@@ -60,7 +34,7 @@ export function Navbar({ activeSection }) {
         <DollarIcon
           className={`h-6 w-6 ${
             activeSection === "price"
-              ? "text-orange-400"
+              ? "text-[#DCD7FE]"
               : "text-neutral-100/60"
           }`}
         />

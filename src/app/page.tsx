@@ -11,7 +11,6 @@ export default function LandingPage({}) {
       hero={<Hero />}
       price={<Pricing />}
       feature={<Projects />}
-      testimonial={<TweetGrid />}
     />
   )
 }

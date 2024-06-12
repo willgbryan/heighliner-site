@@ -11,27 +11,21 @@ import { Navbar } from "@/components/navbar"
 let tabs = [
   { id: "hero", label: "Hero" },
   { id: "feature", label: "Feature" },
-  { id: "testimonial", label: "Testimonial" },
   { id: "price", label: "Price" },
 ]
 
 export default function LandingPageLayout({
   hero,
   feature,
-  testimonial,
   price,
 }) {
   const [activeSection, setActiveSection] = useState(tabs[0].id)
 
   const heroRef = useRef(null)
-  const featureRef = useRef(null)
-  const testimonialRef = useRef(null)
   const priceRef = useRef(null)
 
   const sectionRefs = {
     hero: heroRef,
-    feature: featureRef,
-    testimonial: testimonialRef,
     price: priceRef,
   }
 
@@ -74,7 +68,7 @@ export default function LandingPageLayout({
   return (
     <>
       <div className="relative z-[9999] w-screen ">
-        <div className=" flex items-center justify-center">
+        <div className=" flex items-center justify-end pr-10">
           <div className=" fixed bottom-10 md:top-10 z-[9999]">
             <motion.div
               initial={{ opacity: 0, y: -120 }}
@@ -88,21 +82,11 @@ export default function LandingPageLayout({
           </div>
         </div>
       </div>
-      <main className="overflow-hidden ">
+      <main className="bg-white overflow-hidden ">
         <section id="hero" ref={heroRef}>
           <div className="h-full md:h-[900px] ">{hero}</div>
         </section>
-        <section id="feature" ref={featureRef} className=" z-10">
-          <div className=" py-9">
-            <div className="pt-12 ">{feature}</div>
-          </div>
-        </section>
-        <section id="testimonial" ref={testimonialRef}>
-          <div className="block md:h-[1400px] py-9">
-            <div className=" px-2">{testimonial}</div>
-          </div>
-        </section>
-        <div className="relative h-full bg-black rounded-t-[4rem]">
+        <div className="relative h-full bg-gradient-to-br from-violet-200 to-slate-900 rounded-t-[4rem]">
           <section id="price" ref={priceRef}>
             <div className="w-full h-full md:h-[900px]  ">{price}</div>
           </section>
