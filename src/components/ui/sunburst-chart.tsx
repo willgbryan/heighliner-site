@@ -404,7 +404,7 @@ const sunburst_data = {
     ]
   }
 
-const MyResponsiveSunburst = () => (
+export const MyResponsiveSunburst = () => (
     <ResponsiveSunburst
         data={sunburst_data}
         margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
@@ -430,4 +430,3 @@ const MyResponsiveSunburst = () => (
         transitionMode="startAngle"
     />
 )
-export const MyResponsiveSunburst = () => ()

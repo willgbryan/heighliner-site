@@ -3,7 +3,7 @@
 
 import React from "react"
 import Image from "next/image"
-import imageCard from "@/images/projects/Clay-6.png"
+import clay4Img from "@/images/projects/Clay-4.png"
 import {
   IconBoxAlignRightFilled,
   IconFileBroken,
@@ -29,6 +29,8 @@ import {
 } from "@/components/icons"
 
 import { MyResponsiveSunburst } from "@/components/ui/sunburst-chart"
+import { FadeIn } from "@/components/cult/fade-in"
+import { GradientHeading } from "@/components/cult/gradient-heading"
 
 export function BentoLayout() {
   return (
@@ -59,40 +61,6 @@ export function BentoLayout() {
 
           </Balancer>
         </p>
-      </div>
-      <div className="max-w-6xl mx-auto">
-           <MyResponsiveSunburst />
-         </div>
-      <div className=" py-12 max-w-6xl mx-auto ">
-        <div className=" py-12 rounded-3-xl px-2">
-          <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] ">
-            <BentoImageCard
-              text="development"
-              image={imageCard}
-              description="gpt app"
-              className="md:col-span-1"
-            >
-              <OpenAIIcon className="stroke-orange-800 h-16 w-16 fill-orange-100 group-hover:animate-spin-medium" />
-            </BentoImageCard>
-            {items.map((item, i) => (
-              <BentoGridItem
-                key={i}
-                title={item.title}
-                description={item.description}
-                header={item.header}
-                className={cn("[&>p:text-lg]", item.className)}
-                icon={item.icon}
-              />
-            ))}
-            <BentoGridItemCta
-              title={ctaCard.title}
-              description={ctaCard.description}
-              header={ctaCard.header}
-              className={cn("[&>p:text-lg]", ctaCard.className)}
-              icon={ctaCard.icon}
-            />
-          </BentoGrid>
-        </div>
       </div>
     </>
   )
