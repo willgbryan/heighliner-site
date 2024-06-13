@@ -28,6 +28,8 @@ import {
   SupabaseIcon,
 } from "@/components/icons"
 
+import { MyResponsiveSunburst } from "@/components/ui/sunburst-chart"
+
 export function BentoLayout() {
   return (
     <>
@@ -37,19 +39,30 @@ export function BentoLayout() {
           text="Find your ideal customer"
           type="shiftInUp"
         />
-        <p className="max-w-md md:max-w-lg text-center text-xl">
+        <p className="max-w-3xl md:max-w-3xl text-center text-xl">
           <Balancer>
-            Finding quality leads is hard. So Magi does it{" "}
-            <span className="bg-[#DCD7FE] font-bold px-2 rounded-sm">
-              for you.
+            Magi's{" "}
+            <span className="bg-gradient-to-br from-violet-200 font-bold px-2 rounded-sm">
+              intelligent lead generation engine
             </span>{" "}
-            Magi works with your organization to explore new opportunities, test new markets, and refine or find your{" "}
-            <span className="bg-[#DCD7FE] font-bold px-2 rounded-sm">
-              product market fit.
+             scours vast data repositories to pinpoint prospects exhibiting strong buyer intent and an ideal fit for your products or services.{" "}
+            <span className="bg-gradient-to-br from-violet-200 font-bold px-2 rounded-sm">
+            Precise product-market fit analysis
             </span>{" "}
+             leverages machine learning to deeply understand your offerings and target markets. This data-driven approach identifies untapped 
+             opportunities, optimizes positioning, and ensures your products resonate strongly with the right customer segments.{" "}
+            <span className="bg-gradient-to-br from-violet-200 font-bold px-2 rounded-sm">
+              Magi accelerates pipeline development and revenue growth
+            </span>{" "}
+              by combining intelligent lead generation with granular product-market insights. Magi equips your sales and marketing teams with 
+              a continuous stream of meticulously vetted, sales-ready leads primed for conversion.
+
           </Balancer>
         </p>
       </div>
+      <div className="max-w-6xl mx-auto">
+           <MyResponsiveSunburst />
+         </div>
       <div className=" py-12 max-w-6xl mx-auto ">
         <div className=" py-12 rounded-3-xl px-2">
           <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] ">

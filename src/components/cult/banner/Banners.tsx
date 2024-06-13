@@ -183,9 +183,9 @@ const Banners = () => {
   camera.setRotation(-10)
 
   return (
-    <div className="space-y-6">
+    <div className="space">
       <InfiniteBanner clock={clock.value}>
-        <div className="flex space-x-6 pr-6 ">
+        <div className="flex">
           {bannerOneImages.map((img, i) => (
             <Photo
               key={`set1-${i}`}
@@ -196,7 +196,7 @@ const Banners = () => {
         </div>
       </InfiniteBanner>
       <InfiniteBanner clock={reverseClock.value}>
-        <div className="flex space-x-6 pr-6">
+        <div className="flex">
           {bannerTwoImages.map((img, i) => (
             <Photo
               key={`set2-${i}`}

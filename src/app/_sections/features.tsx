@@ -42,7 +42,7 @@ export function Projects() {
         <OurWorkBanner />
       </div>
 
-      {/* <BentoLayout /> */}
+      <BentoLayout />
     </div>
   )
 }
