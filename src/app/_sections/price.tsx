@@ -14,14 +14,14 @@ const gradients = [
 export function Pricing() {
   return (
     <>
-      <div className="flex  py-9 justify-center items-center flex-col">
+      <div className="flex py-9 justify-center items-center flex-col">
         <TextAnimate
           text="Pricing"
           type="shiftInUp"
-          className="text-[2.3rem] font-bold md:text-[6rem] md:font-semibold tracking-tighter text-neutral-300"
+          className="text-[2.3rem] font-bold md:text-[6rem] md:font-semibold tracking-tighter text-white"
         />
 
-        <GradientHeading size="sm" variant="lightSecondary">
+        <GradientHeading size="sm" variant="light">
           Choose a plan that's right for you.
         </GradientHeading>
       </div>

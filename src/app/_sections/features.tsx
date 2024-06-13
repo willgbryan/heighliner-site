@@ -31,7 +31,7 @@ export function Projects() {
             <p className="mt-6 px-6 md:text-lg md:leading-8 text-black/90 text-center leading-5">
               <Balancer>
                 Magi offers lead generation and product market fitting as a serivce. With the latest machine learning
-                techniques embedded throughout our process, we can quickly generate, vet, and refine leads that are 
+                techniques embedded throughout our process, Magi can quickly generate, vet, and refine leads that are 
                 perfect for your business.
               </Balancer>
             </p>
@@ -42,7 +42,7 @@ export function Projects() {
         <OurWorkBanner />
       </div>
 
-      <BentoLayout />
+      {/* <BentoLayout /> */}
     </div>
   )
 }

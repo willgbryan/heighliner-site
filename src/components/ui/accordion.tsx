@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { ArrowDownLeftSquare } from "lucide-react"
+import { Hexagon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -34,7 +34,7 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <ArrowDownLeftSquare className="h-12 w-12  shrink-0 transition-transform duration-200 fill-orange-200 stroke-black " />
+      <Hexagon className="h-6 w-6  shrink-0 transition-transform duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))

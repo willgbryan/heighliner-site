@@ -34,24 +34,19 @@ export function BentoLayout() {
       <div className="pt-24  pb-6 flex flex-col items-center justify-center">
         <TextAnimate
           className="font-black pb-6 text-3xl"
-          text="Everything you need"
+          text="Find your ideal customer"
           type="shiftInUp"
         />
         <p className="max-w-md md:max-w-lg text-center text-xl">
           <Balancer>
-            Shipping Saas apps is hard. We make it{" "}
-            <span className="bg-orange-100 font-bold px-2 rounded-sm">
-              easy.
+            Finding quality leads is hard. So Magi does it{" "}
+            <span className="bg-[#DCD7FE] font-bold px-2 rounded-sm">
+              for you.
             </span>{" "}
-            Rune provides you with{" "}
-            <span className="bg-orange-100 font-bold px-2 rounded-sm">
-              clean
+            Magi works with your organization to explore new opportunities, test new markets, and refine or find your{" "}
+            <span className="bg-[#DCD7FE] font-bold px-2 rounded-sm">
+              product market fit.
             </span>{" "}
-            code, bleeding edge stack, and an architecture that scales from
-            0-1million real{" "}
-            <span className="bg-black text-orange-100 font-bold px-2 rounded-sm">
-              fast.
-            </span>
           </Balancer>
         </p>
       </div>
