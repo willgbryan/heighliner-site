@@ -2,15 +2,15 @@
 
 import * as React from "react"
 import Image, { StaticImageData } from "next/image"
-import lowes1 from "@/images/projects/Clay-1.png"
-import merc3 from "@/images/projects/Clay-2.png"
-import lowes2 from "@/images/projects/Clay-3.png"
-import allyMilestone2 from "@/images/projects/Clay-4.png"
-import allyMilestone from "@/images/projects/Clay-5.png"
-import merc4 from "@/images/projects/Clay-6.png"
-import allyArena1 from "@/images/projects/img-1.png"
-import allyArena2 from "@/images/projects/img-2.png"
-import allyArena3 from "@/images/projects/img-3.png"
+import lowes1 from "@/images/projects/log-3.png"
+import merc3 from "@/images/projects/log-2.png"
+import lowes2 from "@/images/projects/log-3.png"
+import allyMilestone2 from "@/images/projects/log-3.png"
+import allyMilestone from "@/images/projects/log-2.png"
+import merc4 from "@/images/projects/log-2.png"
+import allyArena1 from "@/images/projects/log-2.png"
+import allyArena2 from "@/images/projects/log-3.png"
+import allyArena3 from "@/images/projects/log-2.png"
 import {
   motion,
   MotionValue,
@@ -134,17 +134,15 @@ const Photo = ({ src, onClick }: PhotoProps) => {
         src={src}
         alt={"project-image"}
         placeholder="blur"
-        // width={450}
-        // height={300}
         onClick={() => {
           onClick(ref.current)
           setIsFull((isFull) => !isFull)
         }}
         className={cn(
-          "cursor-pointer  border-8 border-black rounded-xl",
+          "",
           isFull
-            ? "h-64 w-auto md:w-[450px] md:h-[300px] object-cover aspect-auto"
-            : "h-64 w-auto md:w-[450px] md:h-[300px]  object-cover aspect-video"
+            ? "h-80 w-auto md:w-[450px] md:h-[300px] object-cover aspect-auto"
+            : "h-64 w-auto md:w-[450px] md:h-[300px] object-cover aspect-video"
         )}
       />
     </CameraTarget>

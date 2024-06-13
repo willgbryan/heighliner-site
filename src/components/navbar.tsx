@@ -34,7 +34,7 @@ export function Navbar({ activeSection }) {
         <CodeIcon
           className={`h-6 w-6 ${
             activeSection === "feature"
-              ? "text-orange-200"
+              ? "text-[#DCD7FE]"
               : "text-neutral-100/60"
           }`}
         />
