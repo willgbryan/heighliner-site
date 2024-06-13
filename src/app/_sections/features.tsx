@@ -15,18 +15,21 @@ import { useSpring } from "framer-motion"
 export function Projects() {
   const [value, setValue] = useState(0);
   const spring = useSpring(0, {
-    stiffness: 100,
-    damping: 10,
+    stiffness: 50,
+    damping: 50,
   });
 
   useEffect(() => {
     const interval = setInterval(() => {
       setValue((prevValue) => {
-        const newValue = prevValue + Math.floor(Math.random() * 7) + 1;
+        let newValue = prevValue + Math.floor(Math.random() * 3) + 1;
+        if (newValue > 564) {
+          newValue = 564;
+        }
         spring.set(newValue);
         return newValue;
       });
-    }, 1000);
+    }, 1552);
 
     return () => clearInterval(interval);
   }, [spring]);
