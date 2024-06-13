@@ -14,7 +14,7 @@ export function FAQ() {
         <TextAnimate
           text="FAQ"
           type="shiftInUp"
-          className="md:text-[6rem] text-[2rem] font-bold md:leading-10 md:pb-14 tracking-tight text-violet-200 md:py-8"
+          className="md:text-[6rem] text-[2rem] font-bold md:leading-10 md:pb-14 tracking-tight text-black md:py-8"
         />
       </div>
 
@@ -90,8 +90,8 @@ export function FAQ() {
             </AccordionTrigger>
             <AccordionContent className="text-lg font-semibold text-black pl-2">
               More on this coming soon, if you've read this far and you're interested...
-              lead generation is just the tip of the iceberg. Reach out if you have an idea for
-              another use case.
+              lead generation is just the tip of the iceberg. Please reach out if you 
+              have an idea for another use case.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
