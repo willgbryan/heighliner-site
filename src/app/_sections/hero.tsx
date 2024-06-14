@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <div className="">
       <div className="h-full w-full relative md:z-0">
-        <div className="block absolute top-24 right-0">
+        <div className="hidden md:block absolute md:top-24 right-0">
           <FadeIn>
             <Image
               src={heroClay}
@@ -25,7 +25,7 @@ export function Hero() {
         <div className="absolute top-[calc(50vh-130px)] left-40 z-[9999] w-full md:w-auto pr-4">
           <FadeIn>
             <GradientHeading
-              className="flex md:items-end sm:items-start justify-start flex-col text-left"
+              className="flex items-end justify-start flex-col text-left"
               size="xl"
               asChild
             >
