@@ -88,7 +88,7 @@ export function WaitlistPage() {
   };
 
   return (
-    <div className="relative w-full min-h-screen">
+    <div className="relative min-w-screen min-h-screen">
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
