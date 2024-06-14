@@ -29,7 +29,7 @@ export function Hero() {
               size="xxl"
               asChild
             >
-              <h1 className="flex items-center font-semibold flex-col text-[5rem] md:text-[12.5rem] pb-4">
+              <h1 className="flex items-center font-semibold flex-col text-[4rem] md:text-[12.5rem] pb-4">
                 &lt;/magi&gt; <br />
               </h1>
             </GradientHeading>
