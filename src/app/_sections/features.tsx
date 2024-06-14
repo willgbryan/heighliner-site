@@ -65,7 +65,7 @@ export function Projects() {
         <OurWorkBanner />
       </div>
       <div className="py-6 rounded-xl px-2 transform translate-x-20 translate-y-[-25rem]">
-        <div className="absolute top-[calc(50vh-130px)] right-20 z-[9999] w-full md:w-auto pr-4">
+        {/* <div className="absolute top-[calc(50vh-130px)] right-20 z-[9999] w-full md:w-auto pr-4">
           <FadeIn>
             <GradientHeading
               className="flex items-end justify-end md:justify-start flex-col text-right md:text-left"
@@ -77,7 +77,7 @@ export function Projects() {
               </h2>
             </GradientHeading>
           </FadeIn>
-        </div>
+        </div> */}
       </div>
       <BentoLayout />
     </div>
