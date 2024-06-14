@@ -25,7 +25,7 @@ export function Hero() {
         <div className="absolute top-[calc(50vh-130px)] left-40 z-[9999] w-full md:w-auto pr-4">
           <FadeIn>
             <GradientHeading
-              className="flex items-end sm:items-start justify-start flex-col text-left"
+              className="flex md:items-end sm:items-start justify-start flex-col text-left"
               size="xl"
               asChild
             >

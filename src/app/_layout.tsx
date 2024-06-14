@@ -86,7 +86,7 @@ export default function LandingPageLayout({
       </div>
       <main className="bg-white overflow-hidden ">
         <section id="hero" ref={heroRef}>
-          <div className="h-[900px] ">{hero}</div>
+          <div className="md:h-[900px] sm:h-[600px] ">{hero}</div>
         </section>
         <section id="feature" ref={featureRef} className=" z-10">
           <div className=" py-9">
