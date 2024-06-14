@@ -30,7 +30,7 @@ export function FAQ() {
             value="item-1"
             className="border-x border-b-2 border-violet/10 rounded-md md:px-4"
           >
-            <AccordionTrigger className=" text-xl md:text-3xl text-left pr-4 md:pr-0  font-medium">
+            <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-medium">
               <span className="px-6 md:px-2">
                 When can I expect my new leads?
               </span>
