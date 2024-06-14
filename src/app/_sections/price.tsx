@@ -20,7 +20,7 @@ export function Pricing() {
               size="lg"
               asChild
             >
-              <h2 className="hidden  md:flex items-center font-semibold text-[6rem] pb-10">
+              <h2 className="hidden  md:flex items-center font-semibold text-[5rem] pb-10">
                 Choose the plan that's right for you
                 {/* <span className="font-brand pt-9 sr-only">brand</span> */}
               </h2>
