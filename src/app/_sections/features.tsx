@@ -39,11 +39,11 @@ export function Projects() {
         <div className="mx-auto max-w-lg md:max-w-4xl sm:text-center">
           <div className="mx-auto justify-center items-center flex gap-3">
             <GradientHeading
-              className="flex items-end justify-end md:justify-start flex-col text-right md:text-left"
+              className="flex sm:items-start items-end justify-start flex-col md:text-left"
               size="xl"
               asChild
             >
-              <h2 className="md:flex items-center font-semibold text-[4rem] sm:text-[1rem] md:text-[8rem] pb-4">
+              <h2 className="md:flex items-center font-semibold text-[4rem] sm:text-[0.5rem] md:text-[8rem] pb-4">
                 A lead gen paradigm shift
               </h2>
             </GradientHeading>
