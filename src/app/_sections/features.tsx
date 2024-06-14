@@ -75,7 +75,7 @@ export function Projects() {
                 asChild
               >
                 <h2 className="hidden md:flex items-center font-semibold text-[8rem] pb-4">
-                  &lt;/ potential leads; <AnimatedNumber value={value} precision={0} format={(value) => `${value}`} onAnimationComplete={() => {}} />&gt;
+                  &lt;/potential leads: <AnimatedNumber value={value} precision={0} format={(value) => `${value}`} onAnimationComplete={() => {}} />&gt;
                 </h2>
               </GradientHeading>
             </FadeIn>

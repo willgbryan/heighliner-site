@@ -20,50 +20,50 @@ export function Pricing() {
               size="lg"
               asChild
             >
-              <h2 className="hidden  md:flex items-center font-semibold text-[4.5rem] pb-4">
+              <h2 className="hidden  md:flex items-center font-semibold text-[6rem] pb-10">
                 Choose the plan that's right for you
                 {/* <span className="font-brand pt-9 sr-only">brand</span> */}
               </h2>
             </GradientHeading>
           </div>
-      <div className="flex flex-col  md:flex-row items-center justify-center w-full gap-2 px-2">
+      <div className="flex flex-col  md:flex-row items-center justify-center w-full gap-12 px-2">
       <GradientCard
           type="explore"
-          price="500/m"
+          price="$500/m"
           textColor="text-black"
           gradient={gradients[5]}
           description="Explore potential buyers with specially curated, pre-vetted leads. 10 leads per month."
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
-              <OrganicButton label="explore" />
+              <OrganicButton label="explore" href="/explore"/>
             </div>
           </div>
         </GradientCard>
         <GradientCard
           type="refine"
-          price="1000/m"
+          price="$1000/m"
           textColor="text-black"
           gradient={gradients[5]}
           description="Refine and target specific ideal customer profile requirements. 30 leads per month."
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
-              <OrganicButton label="refine" />
+              <OrganicButton label="refine" href="/refine"/>
             </div>
           </div>
         </GradientCard>
 
         <GradientCard
           type="lock"
-          price="3000+/m"
+          price="$3000+/m"
           textColor="text-black"
           gradient={gradients[5]}
           description="Prioritize true product market fit. negotiable leads per month."
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
-              <OrganicButton label="contact us" />
+              <OrganicButton label="contact us" href="/lock"/>
             </div>
           </div>
         </GradientCard>
