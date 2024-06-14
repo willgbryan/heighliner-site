@@ -25,11 +25,11 @@ export function Hero() {
         <div className="absolute top-[calc(50vh-130px)] left-40 z-[9999] w-auto pr-4">
           <FadeIn>
             <GradientHeading
-              className="flex items-end justify-start flex-col text-left sm:items-center sm:justify-center sm:text-center"
+              className="flex items-end justify-start flex-col text-left"
               size="xl"
               asChild
             >
-              <h1 className="flex items-center font-semibold flex-col text-[6rem] sm:text-[2rem] md:text-[12.5rem] pb-4">
+              <h1 className="flex items-center font-semibold flex-col text-[4rem] md:text-[12.5rem] pb-4">
                 &lt;/magi&gt; <br />
               </h1>
             </GradientHeading>
