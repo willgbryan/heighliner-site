@@ -41,7 +41,7 @@ export function GradientCard({
           </p>
 
           <p className="mt-6 flex items-baseline justify-start gap-x-2">
-            <span className="text-5xl font-bold tracking-tight ">${price}</span>
+            <span className="text-5xl font-bold tracking-tight ">{price}</span>
 
             <span className="text-sm font-semibold leading-6 tracking-wide text-neutral-600">
               USD

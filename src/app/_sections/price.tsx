@@ -14,17 +14,18 @@ const gradients = [
 export function Pricing() {
   return (
     <>
-      <div className="flex py-9 justify-center items-center flex-col">
-        <TextAnimate
-          text="Pricing"
-          type="shiftInUp"
-          className="text-[2.3rem] font-bold md:text-[6rem] md:font-semibold tracking-tighter text-white"
-        />
-
-        <GradientHeading size="sm" variant="light">
-          Choose a plan that's right for you.
-        </GradientHeading>
-      </div>
+          <div className="mx-auto justify-center items-center  flex gap-3">
+            <GradientHeading
+              className="flex items-end justify-end md:justify-start flex-col text-right md:text-right"
+              size="lg"
+              asChild
+            >
+              <h2 className="hidden  md:flex items-center font-semibold text-[4.5rem] pb-4">
+                Choose the plan that's right for you
+                {/* <span className="font-brand pt-9 sr-only">brand</span> */}
+              </h2>
+            </GradientHeading>
+          </div>
       <div className="flex flex-col  md:flex-row items-center justify-center w-full gap-2 px-2">
       <GradientCard
           type="explore"

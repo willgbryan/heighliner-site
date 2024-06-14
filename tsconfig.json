@@ -28,7 +28,6 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
-    "**/*.js",
     ".next/types/**/*.ts",
     ".prettierrc.js",
     ".prettierrc.js"

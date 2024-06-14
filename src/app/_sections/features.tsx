@@ -23,8 +23,8 @@ export function Projects() {
     const interval = setInterval(() => {
       setValue((prevValue) => {
         let newValue = prevValue + Math.floor(Math.random() * 3) + 1;
-        if (newValue > 564) {
-          newValue = 564;
+        if (newValue > 855) {
+          newValue = 855;
         }
         spring.set(newValue);
         return newValue;

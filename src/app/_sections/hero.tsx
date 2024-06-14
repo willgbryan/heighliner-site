@@ -30,7 +30,7 @@ export function Hero() {
               asChild
             >
               <h1 className="hidden  md:flex items-center font-semibold flex-col text-[12.5rem] pb-4">
-                &lt;/magi&gt;
+                &lt;/magi&gt; <br />
                 {/* <span className="font-brand pt-9 sr-only">brand</span> */}
               </h1>
             </GradientHeading>
