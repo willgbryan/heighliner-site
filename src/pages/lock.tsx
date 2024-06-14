@@ -93,7 +93,7 @@ export function WaitlistPage() {
           </div>
         </div>
         <div className="flex flex-1 justify-center">
-          <div className="max-w-xl w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+          <div className="max-w-xl w-full mx-auto rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
             <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
               Tell us about yourself.
             </h2>
@@ -119,7 +119,7 @@ export function WaitlistPage() {
                 }
               }}
             >
-              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+              <div className="flex flex-col w-full md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                 <LabelInputContainer>
                   <Label htmlFor="firstname">First name</Label>
                   <Input
