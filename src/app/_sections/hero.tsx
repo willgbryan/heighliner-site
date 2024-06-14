@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <div className="">
       <div className="h-full w-full relative md:z-0">
-        <div className="block absolute top-24 right-0 ">
+        <div className="block absolute top-24 right-0">
           <FadeIn>
             <Image
               src={heroClay}
@@ -25,31 +25,17 @@ export function Hero() {
         <div className="absolute top-[calc(50vh-130px)] left-40 z-[9999] w-full md:w-auto pr-4">
           <FadeIn>
             <GradientHeading
-              className="flex items-end  justify-start  flex-col text-left"
+              className="flex items-end justify-start flex-col text-left"
               size="xxl"
               asChild
             >
-              <h1 className="flex items-center font-semibold flex-col text-[12.5rem] pb-4">
+              <h1 className="flex items-center font-semibold flex-col text-[6rem] sm:text-[4rem] md:text-[12.5rem] pb-4">
                 &lt;/magi&gt; <br />
-                {/* <span className="font-brand pt-9 sr-only">brand</span> */}
               </h1>
             </GradientHeading>
           </FadeIn>
         </div>
-        {/* <div className="hidden md:block absolute top-[calc(100vh-530px)]   right-7">
-          <TextAnimate
-            className="font-brand pt-9 md:text-[12.5rem] "
-            text="brand"
-            type="rollIn"
-          />
-        </div> */}
       </div>
-
-      {/* <div className=" md:hidden  ">
-        <FadeIn>
-          <BackgroundMedia src="/Clay-1.png" alt="blob image of brain" />
-        </FadeIn>
-      </div> */}
     </div>
   )
 }
