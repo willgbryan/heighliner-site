@@ -26,10 +26,10 @@ export function Hero() {
           <FadeIn>
             <GradientHeading
               className="flex items-end justify-start flex-col text-left"
-              size="xxl"
+              size="xl"
               asChild
             >
-              <h1 className="flex items-center font-semibold flex-col text-[6rem] sm:text-[4rem] md:text-[12.5rem] pb-4">
+              <h1 className="flex items-center font-semibold flex-col text-[6rem] sm:text-[2rem] md:text-[12.5rem] pb-4">
                 &lt;/magi&gt; <br />
               </h1>
             </GradientHeading>
