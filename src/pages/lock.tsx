@@ -155,7 +155,7 @@ export function WaitlistPage() {
                 />
               </LabelInputContainer>
               <LabelInputContainer className="mb-4">
-                <Label htmlFor="companyName">Company</Label>
+                <Label htmlFor="companyName">Company{"                                                 "}</Label>
                 <Input
                   id="companyName"
                   placeholder="Stark Industries"
