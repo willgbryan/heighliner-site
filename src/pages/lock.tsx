@@ -85,14 +85,9 @@ export function WaitlistPage() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex min-h-screen flex-col md:flex-row items-center justify-center bg-[#CECECE] font-inter p-4"
+        className="flex min-h-screen flex-col md:flex-row items-center justify-center bg-white font-inter p-4"
       >
-        <div className="hidden md:flex flex-1 justify-center mb-8 md:mb-0">
-          <div className="loader-container">
-            <div className="loader"></div>
-          </div>
-        </div>
-        <div className="flex flex-1 justify-center">
+        <div className="flex justify-center">
           <div className="max-w-xl w-full mx-auto rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
             <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
               Tell us about yourself.
@@ -155,7 +150,7 @@ export function WaitlistPage() {
                 />
               </LabelInputContainer>
               <LabelInputContainer className="mb-4">
-                <Label htmlFor="companyName">Company{"                                                 "}</Label>
+                <Label htmlFor="companyName">Company</Label>
                 <Input
                   id="companyName"
                   placeholder="Stark Industries"

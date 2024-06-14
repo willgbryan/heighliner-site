@@ -43,7 +43,7 @@ export function Projects() {
               size="xxl"
               asChild
             >
-              <h2 className="md:flex items-center font-semibold text-[3rem] md:text-[8rem] pb-4">
+              <h2 className="md:flex items-center font-semibold text-[3rem] md:text-[8rem] pl-4 pb-4">
                 A lead gen paradigm shift
               </h2>
             </GradientHeading>
