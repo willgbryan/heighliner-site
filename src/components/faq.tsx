@@ -31,11 +31,9 @@ export function FAQ() {
             className="border-x border-b-2 border-violet/10 rounded-md md:px-4"
           >
             <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-medium">
-              <span className="px-6 md:px-2">
                 When can I expect my new leads?
-              </span>
             </AccordionTrigger>
-            <AccordionContent className="text-lg font-semibold text-black px-4">
+            <AccordionContent className="text-lg font-semibold text-black pl-2">
               Within one week of signing up! While quality is guaranteed from the jump,
               Magi needs to learn. By turning leads around quickly, we give you time to adequately
               explore their potential so we can refine leads for the next month.
