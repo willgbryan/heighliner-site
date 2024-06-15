@@ -43,22 +43,26 @@ export function BentoLayout() {
         />
         <p className="max-w-3xl md:max-w-3xl text-center text-xl">
           <Balancer>
-            Magi's{" "}
             <span className="bg-gradient-to-br from-violet-200 font-bold px-2 rounded-sm">
-              intelligent lead generation engine
-            </span>{" "}
-             scours vast data repositories to pinpoint prospects exhibiting strong buyer intent and an ideal fit for your products or services.{" "}
+              Magi's intelligent lead generation engine
+            </span>
+            {" "}scours vast data repositories to pinpoint prospects exhibiting strong buyer intent and an ideal fit for your products or services.
+          </Balancer>
+        </p>
+        <p className="max-w-3xl md:max-w-3xl text-center text-xl mt-4">
+          <Balancer>
             <span className="bg-gradient-to-br from-violet-200 font-bold px-2 rounded-sm">
-            Precise product-market fit analysis
-            </span>{" "}
-             leverages machine learning to deeply understand your offerings and target markets. This data-driven approach identifies untapped 
-             opportunities, optimizes positioning, and ensures your products resonate strongly with the right customer segments.{" "}
+              Precise product-market fit analysis
+            </span>
+            {" "}leverages machine learning to deeply understand your offerings and target markets. This data-driven approach identifies untapped opportunities, optimizes positioning, and ensures your products resonate strongly with the right customer segments.
+          </Balancer>
+        </p>
+        <p className="max-w-3xl md:max-w-3xl text-center text-xl mt-4">
+          <Balancer>
             <span className="bg-gradient-to-br from-violet-200 font-bold px-2 rounded-sm">
               Magi accelerates pipeline development and revenue growth
-            </span>{" "}
-              by combining intelligent lead generation with granular product-market insights. Magi equips your sales and marketing teams with 
-              a continuous stream of meticulously vetted, sales-ready leads primed for conversion.
-
+            </span>
+            {" "}by combining intelligent lead generation with granular product-market insights. Magi equips your sales and marketing teams with a continuous stream of meticulously vetted, sales-ready leads primed for conversion.
           </Balancer>
         </p>
       </div>
