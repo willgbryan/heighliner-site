@@ -84,12 +84,12 @@ export function FAQ() {
             className="border-x border-b-2 border-violet/10 rounded-md md:px-4"
           >
             <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-medium">
-              How does it work?
+              It's a bit expensive isn't it?
             </AccordionTrigger>
             <AccordionContent className="text-lg font-semibold text-black pl-2">
-              More on this coming soon, if you've read this far and you're interested...
-              lead generation is just the tip of the iceberg. Please reach out if you 
-              have an idea for another use case.
+              Magi goes beyond just turning around leads, its all about finding the perfect user or
+              organization for the product or service you're providing. Our mission to find true product 
+              market fit for our users prices us above more traditional lead generation products.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

@@ -45,7 +45,7 @@ export function Pricing() {
           price="$1000/m"
           textColor="text-black"
           gradient={gradients[5]}
-          description="Refine and target specific ideal customer profile requirements. 50 leads per month."
+          description="Refine and target specific ideal customer profile requirements. 60 leads per month."
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
