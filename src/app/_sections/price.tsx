@@ -32,7 +32,7 @@ export function Pricing() {
           price="$500/m"
           textColor="text-black"
           gradient={gradients[5]}
-          description="Explore potential buyers with specially curated, pre-vetted leads. 10 leads per month."
+          description="Explore potential buyers with specially curated, pre-vetted leads. 25 leads per month."
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
@@ -45,7 +45,7 @@ export function Pricing() {
           price="$1000/m"
           textColor="text-black"
           gradient={gradients[5]}
-          description="Refine and target specific ideal customer profile requirements. 30 leads per month."
+          description="Refine and target specific ideal customer profile requirements. 50 leads per month."
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
@@ -56,7 +56,7 @@ export function Pricing() {
 
         <GradientCard
           type="lock"
-          price="$3000+/m"
+          price="Custom"
           textColor="text-black"
           gradient={gradients[5]}
           description="Prioritize true product market fit. negotiable leads per month."
