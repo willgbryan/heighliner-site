@@ -28,11 +28,11 @@ export function Pricing() {
           </div>
       <div className="flex flex-col  md:flex-row items-center justify-center w-full gap-12 px-2">
       <GradientCard
-          type="explore"
-          price="$500/m"
+          type=""
+          price="Startup"
           textColor="text-black"
           gradient={gradients[5]}
-          description="Explore potential buyers with specially curated, pre-vetted leads. 25 leads per month."
+          description="Explore potential buyers, investors, and identify your ICP."
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
@@ -41,11 +41,11 @@ export function Pricing() {
           </div>
         </GradientCard>
         <GradientCard
-          type="refine"
-          price="$1000/m"
+          type=""
+          price="Scale"
           textColor="text-black"
           gradient={gradients[5]}
-          description="Refine and target specific ideal customer profile requirements. 60 leads per month."
+          description="Go after your existing ICP, expand your current user base, and lock in product market fit."
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
@@ -55,11 +55,11 @@ export function Pricing() {
         </GradientCard>
 
         <GradientCard
-          type="lock"
-          price="Custom"
+          type=""
+          price="Expand"
           textColor="text-black"
           gradient={gradients[5]}
-          description="Prioritize true product market fit. negotiable leads per month."
+          description="Test new product offerings, markets, or diversify into new user bases."
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
