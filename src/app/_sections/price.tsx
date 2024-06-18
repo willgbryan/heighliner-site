@@ -36,7 +36,7 @@ export function Pricing() {
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
-              <OrganicButton label="explore" href="/explore"/>
+              <OrganicButton label="contact us" href="/explore"/>
             </div>
           </div>
         </GradientCard>
@@ -49,7 +49,7 @@ export function Pricing() {
         >
           <div className="bg-gradient-to-br from-violet-200 w-full absolute bottom-0 left-0 rounded-r-[28px] rounded-b-[28px] py-8 pl-6">
             <div className="">
-              <OrganicButton label="refine" href="/refine"/>
+              <OrganicButton label="contact us" href="/refine"/>
             </div>
           </div>
         </GradientCard>
