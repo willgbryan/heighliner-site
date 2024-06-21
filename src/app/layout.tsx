@@ -1,4 +1,5 @@
 import "./globals.css"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import localFont from "next/font/local"
 import { Toaster } from "sonner"
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             brand.variable
           )}
         >
+          <SpeedInsights/>
           <div className="relative flex   mx-auto flex-col">
             {/* <div className="top-12 absolute right-12 md:right-24 ">
               <OrganicButton label="<go>" />
