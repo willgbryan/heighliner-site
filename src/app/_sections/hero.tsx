@@ -30,7 +30,7 @@ export function Hero() {
               asChild
             >
               <h1 className="flex items-center font-semibold flex-col text-[4rem] md:text-[12.5rem] pb-4">
-                &lt;/magi&gt; <br />
+                magi; <br />
               </h1>
             </GradientHeading>
           </FadeIn>
