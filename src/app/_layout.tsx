@@ -84,7 +84,7 @@ export default function LandingPageLayout({
           </div>
         </div>
       </div>
-      <main className="bg-white overflow-hidden ">
+      <main className="bg-[#e4e4e4] overflow-hidden ">
         <section id="hero" ref={heroRef}>
           <div className="h-[900px]">{hero}</div>
         </section>

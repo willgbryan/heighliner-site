@@ -162,8 +162,7 @@ module.exports = {
         "rotate-once-down-2s-delay": "rotateIconDown 2s ease .75s forwards", // 1s for animation duration, 2s for delay, 1 for running once
       },
       fontFamily: {
-        sans: ["var(--font-satoshi)"],
-        brand: ["var(--font-brand)"],
+        sans: ['BaruSans', 'sans-serif'],
       },
     },
   },

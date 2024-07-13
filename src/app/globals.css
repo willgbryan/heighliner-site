@@ -132,3 +132,33 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'BaruSans';
+  src: url('/fonts/BaruSansWOFF/BaruSansDemo-Light.woff') format('woff'),
+       url('/fonts/BaruSansOTF/BaruSansDemo-Light.otf') format('opentype'),
+       url('/fonts/BaruSansTTF/BaruSansDemo-Light.ttf') format('truetype');
+  font-weight: thin;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BaruSans';
+  src: url('/fonts/BaruSansOTF/BaruSansDemo-Regular.otf') format('opentype'),
+       url('/fonts/BaruSansWOFF/BaruSansDemo-Regular.woff') format('woff'),
+       url('/fonts/BaruSansTTF/BaruSansDemo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BaruSans';
+  src: url('/fonts/BaruSansOTF/BaruSansDemo-Bold.otf') format('opentype'),
+       url('/fonts/BaruSansWOFF/BaruSansDemo-Bold.woff') format('woff'),
+       url('/fonts/BaruSansTTF/BaruSansDemo-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

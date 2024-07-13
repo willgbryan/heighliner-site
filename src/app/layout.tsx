@@ -1,7 +1,6 @@
 import "./globals.css"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-import localFont from "next/font/local"
 import { Toaster } from "sonner"
 
 import { cn } from "@/lib/utils"
@@ -10,15 +9,6 @@ import { OrganicButton } from "@/components/cult/organic-button"
 import TextAnimate from "@/components/cult/text-animate"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
-const satoshi = localFont({
-  variable: "--font-satoshi",
-  src: "../fonts/Satoshi-Variable.ttf",
-})
-
-const brand = localFont({
-  variable: "--font-brand",
-  src: "../fonts/Array-Bold.woff2",
-})
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -31,9 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen  font-sans antialiased",
-            satoshi.variable,
-            brand.variable
+            "min-h-screen  font-regular antialiased",
           )}
         >
           <SpeedInsights/>
