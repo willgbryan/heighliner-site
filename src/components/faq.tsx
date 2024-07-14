@@ -9,7 +9,7 @@ import TextAnimate from "./cult/text-animate"
 
 export function FAQ() {
   return (
-    <div className="mx-auto max-w-7xl px-6 sm:py-32 lg:px-8 lg:py-20 bg-transparent rounded-t-[48px]">
+    <div className="mx-auto max-w-7xl mt-24 px-6 sm:py-32 lg:px-8 lg:py-20 bg-transparent rounded-t-[48px]">
       <div className="">
         <TextAnimate
           text="FAQ"
