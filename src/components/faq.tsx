@@ -31,12 +31,12 @@ export function FAQ() {
             className="border-b-2 border-stone-900 rounded-sm md:px-4"
           >
             <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-normal">
-                When can I expect my new leads?
+                Are the reviews credible?
             </AccordionTrigger>
             <AccordionContent className="text-lg font-normal text-black pl-2">
-              Within one week of signing up! While quality is guaranteed from the jump,
-              Magi needs to learn. By turning leads around quickly, we give you time to adequately
-              explore their potential so we can refine leads for the next month.
+              Absolutely, we manually vet every review and do not allow unauthenticated users 
+              to leave reviews or even view existing reviews.
+              Organizations that have done business are encouraged to review eachother.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
@@ -44,11 +44,13 @@ export function FAQ() {
             className="border-b-2 border-stone-900 rounded-md md:px-4"
           >
             <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-medium">
-              What does the refinement process look like?
+              What does it cost to use Magi?
             </AccordionTrigger>
-            <AccordionContent className="text-lg font-semibold text-black pl-2">
-              For a given set of leads, Magi will ask which leads converted, are in process,
-              or did not convert. This information is all Magi needs to refine future leads.
+            <AccordionContent className="text-lg font-normal text-black pl-2">
+              It is entirely free to post a new RFP or search Magi's database of startups. We are
+              slowly rolling out paid features via the dashboard where any organization can gain insights into
+              their view count, viewer profiles, and other intent metrics. If you're interested in a demo, send us an email 
+              at Will@themagi.tech.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
@@ -56,40 +58,12 @@ export function FAQ() {
             className="border-b-2 border-stone-900 rounded-md md:px-4"
           >
             <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-medium">
-              Can Magi integrate with my existing CRM?
+              What if I don't want my information on an RFP?
             </AccordionTrigger>
-            <AccordionContent className="text-lg font-semibold text-black pl-2">
-              Absolutely, and this is a great to have as it can accelerate Magi's understanding
-              of your current market positioning. Currently Magi can integrate with Salesforce, Hubspot,
-              Attio, and Zoho.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem
-            value="item-4"
-            className="border-b-2 border-stone-900 rounded-md md:px-4"
-          >
-            <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-medium">
-              How can I be sure Magi can deliver results?
-            </AccordionTrigger>
-            <AccordionContent className="text-lg font-semibold text-black pl-2">
-              The founding team here at Magi has a non-traditional background when it comes to 
-              lead generation. Our goal is to turn this process on its head and deliver an intelligent
-              measurable system for growing any business. Magi will always charge monthly unless 
-              explicitly requested otherwise, users are free to terminate at any point if Magi 
-              does not deliver on its promise.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem
-            value="item-5"
-            className="border-b-2 border-stone-900 rounded-md md:px-4"
-          >
-            <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-medium">
-              It's a bit expensive isn't it?
-            </AccordionTrigger>
-            <AccordionContent className="text-lg font-semibold text-black pl-2">
-              Magi goes beyond just turning around leads, its all about finding the perfect user or
-              organization for the product or service you're providing. Our mission to find true product 
-              market fit for our users prices us above more traditional lead generation products.
+            <AccordionContent className="text-lg font-normal text-black pl-2">
+              RFP listings are completely anonymous. If you create an RFP, your name, contact information,
+              and company name are all hidden from viewers. You will be notified of submissions by inquiring
+              companies, and sharing of your contact information is entirely at your own discrection.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

@@ -24,7 +24,7 @@ export function Pricing() {
               asChild
               variant="secondary"
             >
-              <h2 className="hidden  md:flex items-center font-normal text-[5rem] pb-10">
+              <h2 className="hidden  md:flex items-center font-normal text-[5rem]">
                 Browse 3000+ Startups Already On Magi
                 {/* <span className="font-brand pt-9 sr-only">brand</span> */}
               </h2>
@@ -40,7 +40,7 @@ export function Pricing() {
       </div>
     </div>
     <div className="flex justify-center items-center flex-col px-4">
-      <p className="text-neutral-500 dark:text-neutral-400 text-5xl md:text-5xl max-w-3xl mx-auto mt-24">
+      <p className="text-neutral-500 dark:text-neutral-400 text-5xl md:text-5xl max-w-3xl mx-auto mt-12">
         <LinkPreview url="https://themagi.systems" className="font-normal">
          [ Try Magi ]
         </LinkPreview>{" "}
