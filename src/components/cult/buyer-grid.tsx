@@ -70,7 +70,7 @@ export function BuyerGrid() {
             )}
           />
         ))}
-        <div className="lg:col-span-1 lg:row-start-2">
+        <div className="hidden md:block lg:col-span-1 lg:row-start-2">
           <SimkinGliderGunAnimation/>
         </div>
       </div>

@@ -64,7 +64,7 @@ export function StartupGrid() {
             className="lg:col-span-1"
           />
         ))}
-        <div className="lg:col-span-1 lg:row-span-1 relative h-full">
+        <div className="hidden md:block lg:col-span-1 lg:row-span-1 relative h-full">
           <GliderGunAnimation direction="down-left"/>
         </div>
         {features.slice(3).map((feature, index) => (
