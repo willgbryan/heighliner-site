@@ -47,11 +47,11 @@ export function BuyerGrid() {
   return (
     <div className="relative z-10 py-10 max-w-7xl mx-auto">
       <GradientHeading
-        className="text-end mb-6"
+        className="text-start sm:text-end mb-6"
         size="lg"
         variant="secondary"
       >
-        <h3 className="font-normal text-stone-900 pr-8">
+        <h3 className="font-normal text-stone-900 pl-8 sm:pr-8">
           [ For Buyers ]
         </h3>
       </GradientHeading>
