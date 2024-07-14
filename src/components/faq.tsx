@@ -14,7 +14,7 @@ export function FAQ() {
         <TextAnimate
           text="FAQ"
           type="shiftInUp"
-          className="md:text-[6rem] text-[2rem] font-bold md:leading-10 md:pb-14 tracking-tight text-black md:py-8"
+          className="md:text-[6rem] text-[2rem] font-normal md:leading-10 md:pb-14 tracking-tight text-black md:py-8"
         />
       </div>
 

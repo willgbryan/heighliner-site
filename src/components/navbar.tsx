@@ -44,7 +44,7 @@ export function Navbar({ activeSection }) {
       id: "price",
       label: "start",
       icon: (
-        <DollarIcon
+        <PointerIcon
           className={`h-6 w-6 ${
             activeSection === "price"
               ? "text-[#e4e4e4]"
@@ -67,13 +67,13 @@ export function Navbar({ activeSection }) {
             <motion.button
               key={tab.id}
               onClick={() => handleTabClick(tab.id)}
-              className="relative flex items-center justify-center px-4 py-2 text-lg cursor-pointer font-medium outline-none transition focus-visible:outline-2"
+              className="relative flex items-center justify-center px-4 py-2 text-lg cursor-pointer font-normal outline-none transition focus-visible:outline-2"
               style={{ WebkitTapHighlightColor: "transparent" }}
             >
               {isActive && (
                 <motion.div
                   layoutId="highlight"
-                  className="absolute inset-0 bg-black mix-blend-difference"
+                  className="absolute inset-0 bg-stone-900 mix-blend-difference"
                   style={{ borderRadius: 9999 }}
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />
@@ -119,15 +119,24 @@ function CodeIcon(props) {
       {...props}
     >
       <path
-        d="M7 15L10 12L7 9M13 15H17M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
+        d="M2 15h10v5h5v-5h5v-5h-10v-5h-5v5h-5z"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7 15v-5h5v5h5v-5"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   )
 }
-function DollarIcon(props) {
+
+function PointerIcon(props) {
   return (
     <svg
       width="24"
@@ -138,10 +147,11 @@ function DollarIcon(props) {
       {...props}
     >
       <path
-        d="M6 16C6 18.2091 7.79086 20 10 20H14C16.2091 20 18 18.2091 18 16C18 13.7909 16.2091 12 14 12H10C7.79086 12 6 10.2091 6 8C6 5.79086 7.79086 4 10 4H14C16.2091 4 18 5.79086 18 8M12 2V22"
+        d="M7.904 17.563a1.2 1.2 0 0 0 2.228 .308l2.09 -3.093l4.907 4.907a1.067 1.067 0 0 0 1.509 0l1.047 -1.047a1.067 1.067 0 0 0 0 -1.509l-4.907 -4.907l3.113 -2.09a1.2 1.2 0 0 0 -.309 -2.228l-13.582 -3.904l3.904 13.563z"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   )
