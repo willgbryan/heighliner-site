@@ -51,7 +51,7 @@ export function StartupGrid() {
         size="lg"
         variant="secondary"
       >
-        <h3 className="font-normal text-stone-900">
+        <h3 className="font-normal text-stone-900 pl-8">
           [ For Startups ]
         </h3>
       </GradientHeading>

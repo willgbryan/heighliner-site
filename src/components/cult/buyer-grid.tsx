@@ -51,7 +51,7 @@ export function BuyerGrid() {
         size="lg"
         variant="secondary"
       >
-        <h3 className="font-normal text-stone-900 pr-12">
+        <h3 className="font-normal text-stone-900 pr-8">
           [ For Buyers ]
         </h3>
       </GradientHeading>
