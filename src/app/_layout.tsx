@@ -90,10 +90,10 @@ export default function LandingPageLayout({
         </section>
         <section id="feature" ref={featureRef} className=" z-10">
           <div className=" py-9">
-            <div className="pt-24 ">{feature}</div>
+            <div className="">{feature}</div>
           </div>
         </section>
-        <div className="my-20"></div>
+        <div className=""></div>
         <div className="relative h-full rounded-t-[4rem]">
           <section id="price" ref={priceRef}>
             <div className="w-full h-full md:h-[700px]  ">{price}</div>

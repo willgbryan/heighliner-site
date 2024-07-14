@@ -10,6 +10,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "craftwork.design",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com"
+      },
+      {
+        protocol: "https",
+        hostname:"assets.aceternity.com"
+      },
     ],
   },
 }

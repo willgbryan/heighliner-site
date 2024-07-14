@@ -15,7 +15,7 @@ export function Hero() {
             size="xxl"
             asChild
           >
-            <h1 className="font-normal text-[4rem] md:text-[12.5rem] text-black bg-[#e4e4e4]">
+            <h1 className="font-normal text-[4rem] md:text-[12.5rem] text-stone-900 bg-[#e4e4e4]">
               Magi
             </h1>
           </GradientHeading>

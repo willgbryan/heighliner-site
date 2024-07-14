@@ -10,6 +10,9 @@ import { GradientHeading } from "@/components/cult/gradient-heading"
 import { FadeIn } from "@/components/cult/fade-in"
 import { AnimatedNumber } from "@/components/ui/animated-number"
 import { useSpring } from "framer-motion"
+import { StartupGrid } from "@/components/cult/startup-grid"
+import { BuyerGrid } from "@/components/cult/buyer-grid"
+
 
 export function Projects() {
   const [value, setValue] = useState(0);
@@ -39,47 +42,30 @@ export function Projects() {
         <div className="mx-auto max-w-lg md:max-w-4xl sm:text-center">
           <div className="mx-auto justify-center items-center flex gap-3">
             <GradientHeading
-              className="flex sm:items-start items-end justify-start flex-col md:text-left"
+              className="flex justify-center flex-col md:text-center"
               size="xxl"
               asChild
+              variant="secondary"
             >
-              <h2 className="md:flex items-center font-semibold text-[3rem] md:text-[8rem] pl-4 pb-4">
-                A lead gen paradigm shift
+              <h2 className="md:flex items-center font-normal text-[3rem] md:text-[8rem] pl-4 pb-4">
+                The Startup Marketplace
               </h2>
             </GradientHeading>
           </div>
 
           <RevealAnimation>
             <p className="mt-6 px-6 md:text-lg md:leading-8 text-black/90 text-center leading-5">
-              <Balancer>
-                Magi offers lead generation and product market fitting as a service. With the latest machine learning
-                techniques embedded throughout our process, Magi can quickly generate, vet, and refine leads that are 
-                perfect for your business.
-              </Balancer>
+              Magi is revolutionizing the B2B software marketplace by connecting innovative startups with enterprise buyers, accelerating the path to product-market fit and streamlining the software procurement process.
             </p>
           </RevealAnimation>
         </div>
       </div>
       
-      <div className="pt-12">
-        <OurWorkBanner />
+      <div className="pt-20">
+       
       </div>
-      <div className="py-6 rounded-xl px-2 transform translate-x-20 translate-y-[-25rem]">
-        {/* <div className="absolute top-[calc(50vh-130px)] right-20 z-[9999] w-full md:w-auto pr-4">
-          <FadeIn>
-            <GradientHeading
-              className="flex items-end justify-end md:justify-start flex-col text-right md:text-left"
-              size="lg"
-              asChild
-            >
-              <h2 className="hidden md:flex items-center font-semibold text-[4rem] sm:text-[6rem] md:text-[8rem] pb-4">
-                &lt;/potential leads: <AnimatedNumber value={value} precision={0} format={(value) => `${value}`} onAnimationComplete={() => {}} />&gt;
-              </h2>
-            </GradientHeading>
-          </FadeIn>
-        </div> */}
-      </div>
-      <BentoLayout />
+      <StartupGrid />
+      <BuyerGrid />
     </div>
   )
 }
