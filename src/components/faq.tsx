@@ -9,8 +9,8 @@ import TextAnimate from "./cult/text-animate"
 
 export function FAQ() {
   return (
-    <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-20 bg-transparent rounded-t-[48px]">
-      <div className="py-12">
+    <div className="mx-auto max-w-7xl px-6 sm:py-32 lg:px-8 lg:py-20 bg-transparent rounded-t-[48px]">
+      <div className="">
         <TextAnimate
           text="FAQ"
           type="shiftInUp"
@@ -24,16 +24,16 @@ export function FAQ() {
       <div className="md:mx-auto">
         <Accordion
           type="multiple"
-          className="w-full md:space-y-9 rounded-xl border border-violet-50/20 text-black  backdrop-blur "
+          className="w-full md:space-y-9 rounded-xl text-black  backdrop-blur "
         >
           <AccordionItem
             value="item-1"
-            className="border-x border-b-2 border-violet/10 rounded-md md:px-4"
+            className="border-b-2 border-stone-900 rounded-sm md:px-4"
           >
-            <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-medium">
+            <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-normal">
                 When can I expect my new leads?
             </AccordionTrigger>
-            <AccordionContent className="text-lg font-semibold text-black pl-2">
+            <AccordionContent className="text-lg font-normal text-black pl-2">
               Within one week of signing up! While quality is guaranteed from the jump,
               Magi needs to learn. By turning leads around quickly, we give you time to adequately
               explore their potential so we can refine leads for the next month.
@@ -41,7 +41,7 @@ export function FAQ() {
           </AccordionItem>
           <AccordionItem
             value="item-2"
-            className="border-x border-b-2 border-violet/10 rounded-md md:px-4"
+            className="border-b-2 border-stone-900 rounded-md md:px-4"
           >
             <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-medium">
               What does the refinement process look like?
@@ -53,7 +53,7 @@ export function FAQ() {
           </AccordionItem>
           <AccordionItem
             value="item-3"
-            className="border-x border-b-2 border-violet/10 rounded-md md:px-4"
+            className="border-b-2 border-stone-900 rounded-md md:px-4"
           >
             <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-medium">
               Can Magi integrate with my existing CRM?
@@ -66,7 +66,7 @@ export function FAQ() {
           </AccordionItem>
           <AccordionItem
             value="item-4"
-            className="border-x border-b-2 border-violet/10 rounded-md md:px-4"
+            className="border-b-2 border-stone-900 rounded-md md:px-4"
           >
             <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-medium">
               How can I be sure Magi can deliver results?
@@ -81,7 +81,7 @@ export function FAQ() {
           </AccordionItem>
           <AccordionItem
             value="item-5"
-            className="border-x border-b-2 border-violet/10 rounded-md md:px-4"
+            className="border-b-2 border-stone-900 rounded-md md:px-4"
           >
             <AccordionTrigger className=" text-xl md:text-3xl text-left pl-2  font-medium">
               It's a bit expensive isn't it?

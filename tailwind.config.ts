@@ -58,6 +58,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        stone: colors.stone,
 
         yellow: {
           50: "#fff5eb",
@@ -107,6 +108,11 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -160,6 +166,7 @@ module.exports = {
         "custom-ping": "customPing 1s cubic-bezier(0, 0, 0.2, 1) infinite",
         "rotate-once-2s-delay": "rotateIcon 1s linear 2.1s forwards", // 1s for animation duration, 2s for delay, 1 for running once
         "rotate-once-down-2s-delay": "rotateIconDown 2s ease .75s forwards", // 1s for animation duration, 2s for delay, 1 for running once
+        "scroll": "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       fontFamily: {
         sans: ['BaruSans', 'sans-serif'],
@@ -168,21 +175,6 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animate")],
 }
-
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{ts,tsx}"],
-  darkMode: "class",
-  theme: {
-    // rest of the code
-    extend: {
-      boxShadow: {
-        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
-      },
-    },
-  },
-  plugins: [addVariablesForColors],
-};
 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
