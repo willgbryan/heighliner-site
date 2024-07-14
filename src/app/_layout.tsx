@@ -73,8 +73,6 @@ export default function LandingPageLayout({
               transition={{ duration: 1.6, delay: 0.9, type: "spring" }}
             >
               <div className="flex justify-center items-center flex-col px-4">
-              <div className="absolute inset-y-0 left-0 w-[3px] h-[40px] border-t-2 border-l-2 border-b-2 border-black"></div>
-                  <div className="absolute inset-y-0 right-0 w-[3px] h-[40px] border-t-2 border-r-2 border-b-2 border-black"></div>
                   <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
                     <LinkPreview url="https://themagi.systems" className="font-normal">
                       Try Magi
