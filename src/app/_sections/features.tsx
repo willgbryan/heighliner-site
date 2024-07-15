@@ -48,7 +48,7 @@ export function Projects() {
               variant="secondary"
             >
               <h2 className="md:flex items-center font-normal text-[3rem] md:text-[8rem] pl-4 pb-4">
-                The Startup Marketplace
+                The Startup Discovery Platform
               </h2>
             </GradientHeading>
           </div>
