@@ -162,7 +162,7 @@ function GameOfLife() {
           ctx.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE - 1, CELL_SIZE - 1);
         } else if (trail[y] && trail[y][x] > 0) {
           const opacity = trail[y][x] / 5; // 5 is the max trail value
-          ctx.fillStyle = `rgba(168, 85, 247, ${opacity})`; // Tailwind purple-500
+          ctx.fillStyle = `rgba(116, 58, 232, ${opacity})`; // Tailwind purple-500
           ctx.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE - 1, CELL_SIZE - 1);
         }
       });
