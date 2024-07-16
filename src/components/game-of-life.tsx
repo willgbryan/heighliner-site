@@ -7,9 +7,11 @@ const ANIMATION_SPEED = 100;
 
 type Cell = boolean;
 type Grid = Cell[][];
+type TrailGrid = number[][];
 
 function GameOfLife() {
   const [cells, setCells] = useState<Grid>([]);
+  const [trail, setTrail] = useState<TrailGrid>([]);
   const [isRunning, setIsRunning] = useState(true);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [dimensions, setDimensions] = useState({ width: 1000, height: 900 });
@@ -64,6 +66,12 @@ function GameOfLife() {
     return Array(rows).fill(null).map(() => Array(cols).fill(false));
   }, []);
 
+  const createEmptyTrailGrid = useCallback((width: number, height: number): TrailGrid => {
+    const rows = Math.floor(height / CELL_SIZE);
+    const cols = Math.floor(width / CELL_SIZE);
+    return Array(rows).fill(null).map(() => Array(cols).fill(0));
+  }, []);
+
   const initializeGrid = useCallback((width: number, height: number): Grid => {
     const rows = Math.floor(height / CELL_SIZE);
     const cols = Math.floor(width / CELL_SIZE);
@@ -80,20 +88,25 @@ function GameOfLife() {
 
   useEffect(() => {
     setCells(initializeGrid(dimensions.width, dimensions.height));
-  }, [dimensions, initializeGrid]);
+    setTrail(createEmptyTrailGrid(dimensions.width, dimensions.height));
+  }, [dimensions, initializeGrid, createEmptyTrailGrid]);
 
-  const updateCells = useCallback((prevCells: Grid): Grid => {
-    return prevCells.map((row, y) => 
+  const updateCells = useCallback((prevCells: Grid): [Grid, TrailGrid] => {
+    const newTrail = prevCells.map(row => row.map(() => 0));
+    const newCells = prevCells.map((row, y) => 
       row.map((cell, x) => {
         const neighbors = countNeighbors(prevCells, x, y);
-        if (cell) {
-          return neighbors === 2 || neighbors === 3;
-        } else {
-          return neighbors === 3;
+        const newCell = cell ? (neighbors === 2 || neighbors === 3) : (neighbors === 3);
+        if (newCell) {
+          newTrail[y][x] = 5; // Start with full opacity
+        } else if (trail[y] && trail[y][x] > 0) {
+          newTrail[y][x] = trail[y][x] - 1; // Decrease opacity
         }
+        return newCell;
       })
     );
-  }, []);
+    return [newCells, newTrail];
+  }, [trail]);
 
   const countNeighbors = (cells: Grid, x: number, y: number): number => {
     let count = 0;
@@ -118,7 +131,8 @@ function GameOfLife() {
     const runSimulation = () => {
       if (isRunning) {
         setCells(prevCells => {
-          const newCells = updateCells(prevCells);
+          const [newCells, newTrail] = updateCells(prevCells);
+          setTrail(newTrail);
           return newCells;
         });
       }
@@ -146,10 +160,14 @@ function GameOfLife() {
         if (cell) {
           ctx.fillStyle = 'rgba(0, 0, 0, 0.8)';
           ctx.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE - 1, CELL_SIZE - 1);
+        } else if (trail[y] && trail[y][x] > 0) {
+          const opacity = trail[y][x] / 5; // 5 is the max trail value
+          ctx.fillStyle = `rgba(168, 85, 247, ${opacity})`; // Tailwind purple-500
+          ctx.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE - 1, CELL_SIZE - 1);
         }
       });
     });
-  }, [cells, dimensions]);
+  }, [cells, dimensions, trail]);
 
   const handleCanvasClick = useCallback((event: React.MouseEvent<HTMLCanvasElement>) => {
     const canvas = canvasRef.current;
