@@ -47,8 +47,8 @@ export function Projects() {
               asChild
               variant="secondary"
             >
-              <h2 className="md:flex items-center font-normal text-[3rem] md:text-[8rem] pl-4 pb-4">
-                True Startup Observability
+              <h2 className="md:flex items-center font-normal text-[3rem] md:text-[6rem] pl-4 pb-4">
+                Discover Tomorrow's Tech Stack
               </h2>
             </GradientHeading>
           </div>
