@@ -47,15 +47,15 @@ export function Projects() {
               asChild
               variant="secondary"
             >
-              <h2 className="md:flex items-center font-normal text-[3rem] md:text-[6rem] pl-4 pb-4">
-                Discover Tomorrow's Tech Stack
+              <h2 className="md:flex text-left font-normal text-[2rem] md:text-[4rem] pl-4 pb-4">
+                Innovative Companies Use Innovative Tools
               </h2>
             </GradientHeading>
           </div>
 
           <RevealAnimation>
-            <p className="mt-6 px-6 md:text-lg md:leading-8 text-black/90 text-center leading-5">
-              Magi is revolutionizing the B2B software marketplace by connecting innovative startups with enterprise buyers, accelerating the path to product-market fit and streamlining the software procurement process.
+            <p className="mt-6 px-6 md:text-lg md:leading-8 text-black/90 text-left leading-5">
+              Magi allows innovators to collide. Whether you're shopping for a new tool, developing the next unicorn, or just want to explore the current tech landscape, Magi is the go to marketplace for innovators.
             </p>
           </RevealAnimation>
         </div>

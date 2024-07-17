@@ -75,7 +75,7 @@ export default function LandingPageLayout({
               <div className="flex justify-center items-center flex-col px-4">
                   <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
                     <LinkPreview url="https://themagi.systems" className="font-normal">
-                      Try Magi
+                      Magi
                     </LinkPreview>{" "}
                   </p>
                 </div>
