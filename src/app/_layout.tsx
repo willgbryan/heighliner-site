@@ -73,7 +73,7 @@ export default function LandingPageLayout({
               transition={{ duration: 1.6, delay: 0.9, type: "spring" }}
             >
               <div className="flex justify-center items-center flex-col px-4 mt-2">
-                  <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
+                  <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10 bg-[#e4e4e4] p-2 rounded-lg">
                     <LinkPreview url="https://themagi.systems" className="font-normal">
                       Magi
                     </LinkPreview>{" "}
@@ -81,7 +81,7 @@ export default function LandingPageLayout({
                 </div>
             </motion.div>
           </div>
-          <div className="fixed top-10 right-10 z-[9999]">
+          <div className="fixed top-10 right-10 z-[9999] bg-[#e4e4e4] rounded-lg">
             <motion.div
               initial={{ opacity: 0, y: -120 }}
               animate={{ opacity: 1, y: 0 }}
