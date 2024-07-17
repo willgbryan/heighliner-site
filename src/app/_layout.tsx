@@ -78,7 +78,7 @@ export default function LandingPageLayout({
               </LinkPreview>
             </p>
           </div>
-          <div className="bg-[#e4e4e4] rounded-lg">
+          <div className="">
             <Navbar activeSection={activeSection} />
           </div>
         </motion.div>
