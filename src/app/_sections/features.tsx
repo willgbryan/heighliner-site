@@ -47,7 +47,7 @@ export function Projects() {
               asChild
               variant="secondary"
             >
-              <h2 className="md:flex text-left font-normal text-[2rem] md:text-[4rem] pl-4 pb-4">
+              <h2 className="md:flex text-left font-normal text-[4rem] pl-4 pb-4">
                 Innovative Companies Use Innovative Tools
               </h2>
             </GradientHeading>

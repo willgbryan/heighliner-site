@@ -16,11 +16,11 @@ export function Hero() {
             size="xxl"
             asChild
           >
-            <h1 className="font-normal text-[2rem] md:text-[5rem] max-w-[700px] text-left text-stone-900">
+            <h1 className="font-normal text-[5rem] max-w-[700px] text-left text-stone-900">
               Discover Tomorrow's Tech Stack
             </h1>
           </GradientHeading>
-            <h2 className="mt-6 px-4 md:text-lg md:leading-8 text-black/90 max-w-lg font-normal text-left leading-5">
+            <h2 className="mt-6 px-4 text-lg leading-8 text-black/90 max-w-lg font-normal text-left">
               Magi is revolutionizing the B2B software marketplace by connecting innovative startups with enterprise buyers, accelerating the path to product-market fit and streamlining the software procurement process.
             </h2>
         </FadeIn>
