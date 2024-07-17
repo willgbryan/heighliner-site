@@ -65,7 +65,7 @@ export default function LandingPageLayout({
     <>
       <div className="relative z-[9999] w-screen">
         <div className="flex items-center justify-between px-10">
-          <div className="fixed top-10 left-10 z-[9999]">
+          <div className="md:fixed top-10 left-10 z-[9999]">
             <motion.div
               initial={{ opacity: 0, y: -120 }}
               animate={{ opacity: 1, y: 0 }}
