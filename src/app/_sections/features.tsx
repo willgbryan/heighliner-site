@@ -48,7 +48,7 @@ export function Projects() {
               variant="secondary"
             >
               <h2 className="md:flex text-left font-normal text-[4rem] pl-4 pb-4">
-                Innovative Companies Use Innovative Tools
+                Innovative Companies Need Innovative Solutions
               </h2>
             </GradientHeading>
           </div>
