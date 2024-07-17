@@ -63,37 +63,26 @@ export default function LandingPageLayout({
 
   return (
     <>
-      <div className="relative z-[9999] w-screen">
-        <div className="flex items-center justify-between px-10">
-          <div className="fixed top-10 left-10 z-[9999]">
-            <motion.div
-              initial={{ opacity: 0, y: -120 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 120 }}
-              transition={{ duration: 1.6, delay: 0.9, type: "spring" }}
-            >
-              <div className="flex justify-center items-center flex-col px-4 mt-1">
-                  <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
-                    <LinkPreview url="https://themagi.systems" className="font-normal">
-                      Magi
-                    </LinkPreview>{" "}
-                  </p>
-                </div>
-            </motion.div>
+      <header className="fixed top-0 left-0 right-0 z-[9999] bg-[#e4e4e4]/70 backdrop-blur-md">
+        <motion.div
+          initial={{ opacity: 0, y: -120 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 120 }}
+          transition={{ duration: 1.6, delay: 0.9, type: "spring" }}
+          className="flex items-center justify-between px-10 py-4"
+        >
+          <div className="flex items-center">
+            <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl">
+              <LinkPreview url="https://themagi.systems" className="font-normal">
+                Magi
+              </LinkPreview>
+            </p>
           </div>
-          <div className="fixed top-10 right-10 z-[9999] bg-[#e4e4e4] rounded-lg">
-            <motion.div
-              initial={{ opacity: 0, y: -120 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 120 }}
-              transition={{ duration: 1.6, delay: 0.9, type: "spring" }}
-              className="max-w-4xl"
-            >
-              <Navbar activeSection={activeSection} />
-            </motion.div>
+          <div className="bg-[#e4e4e4] rounded-lg">
+            <Navbar activeSection={activeSection} />
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </header>
       <main className="bg-[#e4e4e4] overflow-hidden">
         <section id="hero" ref={heroRef}>
           <div className="h-[900px]">{hero}</div>
