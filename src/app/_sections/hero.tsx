@@ -21,7 +21,7 @@ export function Hero() {
             </h1>
           </GradientHeading>
             <h2 className="mt-6 px-4 md:text-lg md:leading-8 text-black/90 max-w-lg font-normal text-left leading-5">
-              Magi is revolutionizing the B2B software marketplace by connecting innovative startups with enterprise buyers, accelerating the path to product-market fit and streamlining the software procurement process.
+              Find the most innovative companies, browse open contract opportunities, or list your own on the newest marketplace designed to allow innovative organizations to collide.
             </h2>
         </FadeIn>
       </div>
