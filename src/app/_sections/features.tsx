@@ -55,7 +55,7 @@ export function Projects() {
 
           <RevealAnimation>
             <p className="mt-6 px-6 md:text-lg md:leading-8 text-black/90 text-left leading-5">
-              Magi allows innovators to collide. Whether you're shopping for a new tool, developing the next unicorn, or just want to explore the current tech landscape, Magi is the go to marketplace for innovators.
+              Our curated marketplace makes navigating the noisy tech landscape simple.
             </p>
           </RevealAnimation>
         </div>
