@@ -50,7 +50,7 @@ export function FAQ() {
               It is entirely free to post a new RFP or search Magi's database of startups. We are
               slowly rolling out paid features via the dashboard where any organization can gain insights into
               their view count, viewer profiles, and other intent metrics. If you're interested in a demo, send us an email 
-              at Will@themagi.tech.
+              at support@themagi.tech.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
