@@ -18,13 +18,13 @@ export function BuyerGrid() {
     {
       title: "Recommendations",
       description:
-        "Tell us about your current tech/SaaS stack recieve tailored recommendations.",
+        "Tell us about your current tech/SaaS stack and recieve tailored recommendations.",
       icon: <IconSparkles />,
     },
     {
       title: "Easy Discoverability",
       description:
-        "Discover innovate alternatives with advanced features at competitve prices.",
+        "Discover innovative alternatives with advanced features at competitve prices.",
       icon: <IconWorldSearch />,
     },
     {
@@ -35,7 +35,7 @@ export function BuyerGrid() {
     },
     {
       title: "No More Fluff",
-      description: "Streamline your procurement process and reduce unnecessary spending.",
+      description: "Streamline your procurement processes and reduce unnecessary spending.",
       icon: <IconAppsOff />,
     },
     {

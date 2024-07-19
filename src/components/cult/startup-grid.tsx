@@ -18,7 +18,7 @@ export function StartupGrid() {
     {
       title: "Find New Users",
       description:
-        "List your products, beta testing opportunities, and reach high-intent buyers.",
+        "List your products and beta testing opportunities to reach high-intent buyers.",
       icon: <IconUserScan />,
     },
     {
@@ -40,7 +40,7 @@ export function StartupGrid() {
     },
     {
       title: "Find A Perfect Customer",
-      description: "Submit proposals to RFP submissions from high intent customers.",
+      description: "Browse open opportunities created by eager buyers to find the perfect opportunity for your organization.",
       icon: <IconFileArrowRight />,
     },
   ];
