@@ -18,7 +18,7 @@ export function BuyerGrid() {
     {
       title: "Recommendations",
       description:
-        "Tell us about your current tech/SaaS stack and recieve tailored recommendations.",
+        "Tell us about your current tech/SaaS stack when creating your profile and recieve tailored recommendations.",
       icon: <IconSparkles />,
     },
     {
