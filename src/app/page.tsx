@@ -1,14 +1,13 @@
 import { TweetGrid } from "@/components/cult/tweet-grid"
-
 import LandingPageLayout from "./_layout"
 import { Projects } from "./_sections/features"
-import { Hero } from "./_sections/hero"
+import { BlackHoleHero } from "./_sections/hero"
 import { Pricing } from "./_sections/price"
 
-export default function LandingPage({}) {
+export default function LandingPage() {
   return (
     <LandingPageLayout
-      hero={<Hero />}
+      hero={<BlackHoleHero />}
       price={<Pricing />}
       feature={<Projects />}
     />
