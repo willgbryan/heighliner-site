@@ -17,11 +17,16 @@ export default function LandingPageLayout({
   hero,
   feature,
   price,
+}: {
+  hero?: React.ReactNode;
+  feature: React.ReactNode;
+  price: React.ReactNode;
 }) {
   const [activeSection, setActiveSection] = useState(tabs[0].id)
-  const heroRef = useRef(null)
-  const featureRef = useRef(null)
-  const priceRef = useRef(null)
+  const heroRef = useRef<HTMLElement>(null)
+  const featureRef = useRef<HTMLElement>(null)
+  const priceRef = useRef<HTMLElement>(null)
+
   const sectionRefs = {
     hero: heroRef,
     feature: featureRef,
@@ -39,11 +44,13 @@ export default function LandingPageLayout({
       },
       { threshold: 0.1 }
     )
+
     Object.values(sectionRefs).forEach((ref) => {
       if (ref.current) {
         observer.observe(ref.current)
       }
     })
+
     return () => {
       Object.values(sectionRefs).forEach((ref) => {
         if (ref.current) {
@@ -84,9 +91,11 @@ export default function LandingPageLayout({
         </motion.div>
       </header>
       <main className="bg-[#e4e4e4] overflow-hidden">
-        <section id="hero" ref={heroRef}>
-          <div className="h-[900px]">{hero}</div>
-        </section>
+        {hero && (
+          <section id="hero" ref={heroRef}>
+            <div className="h-[900px]">{hero}</div>
+          </section>
+        )}
         <section id="feature" ref={featureRef} className="z-10">
           <div className="py-9">
             <div className="">{feature}</div>

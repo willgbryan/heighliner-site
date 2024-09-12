@@ -57,7 +57,7 @@ export function createConfigGUI(changePerformanceQuality, saveScreenshot) {
     const effectConfig = {
       lorentz_transform: true,
       accretion_disk: true,
-      use_disk_texture: true,
+      use_disk_texture: false,
       doppler_shift: true,
       beaming: true
     }

@@ -5,10 +5,10 @@ const BlackHole = dynamic(() => import('@/components/black-hole/black-hole'), {
   ssr: false
 });
 
-export function BlackHoleHero() {
+export function BlackHoleHero({ scrollPosition }) {
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
-      <BlackHole />
+      <BlackHole scrollPosition={scrollPosition} />
     </div>
   );
 }
