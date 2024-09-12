@@ -7,21 +7,51 @@ import { CameraDragControls } from "./camera/CameraDragControls";
 import { Observer } from "./camera/Observer";
 import vertexShader from './vertexShader.glsl';
 import fragmentShader from './fragmentShader.glsl';
-import { createConfigGUI } from './gui/datGUI';
-import { createStatsGUI } from './gui/statsGUI';
+
+// Modified createConfigGUI function that only returns config objects
+const createConfigGUI = () => {
+  const performanceConfig = {
+    resolution: 1.0,
+    quality: 'medium'
+  };
+
+  const bloomConfig = {
+    strength: 1.0,
+    radius: 0.5,
+    threshold: 0.6
+  };
+
+  const cameraConfig = {
+    distance: 10,
+    orbit: false,
+    fov: 90.0
+  };
+
+  const effectConfig = {
+    lorentz_transform: true,
+    accretion_disk: true,
+    use_disk_texture: false,
+    doppler_shift: true,
+    beaming: true
+  };
+
+  return {
+    performanceConfig,
+    bloomConfig,
+    effectConfig,
+    cameraConfig
+  };
+};
 
 const BlackHole = ({ scrollPosition }) => {
   const canvasRef = useRef(null);
-  const [debugInfo, setDebugInfo] = useState('Initializing...');
   const observerRef = useRef(null);
-  const cameraConfigRef = useRef(null);
   const rendererRef = useRef(null);
   const composerRef = useRef(null);
   const sceneRef = useRef(null);
   const cameraRef = useRef(null);
   const uniformsRef = useRef(null);
-  const effectConfigRef = useRef(null);
-  const bloomConfigRef = useRef(null);
+  const configRef = useRef(null);
 
   const initializeScene = useCallback(() => {
     try {
@@ -85,23 +115,11 @@ const BlackHole = ({ scrollPosition }) => {
       const mesh = new THREE.Mesh(geometry, material);
       scene.add(mesh);
 
-      const changePerformanceQuality = (quality) => {
-        console.log('Changing quality to:', quality);
-      };
+      // Get config objects without creating GUI
+      const config = createConfigGUI();
+      configRef.current = config;
 
-      const saveScreenshot = () => {
-        console.log('Saving screenshot');
-      };
-
-      const { performanceConfig, bloomConfig, effectConfig, cameraConfig } = createConfigGUI(changePerformanceQuality, saveScreenshot);
-      cameraConfigRef.current = cameraConfig;
-      effectConfigRef.current = effectConfig;
-      bloomConfigRef.current = bloomConfig;
-
-      const stats = createStatsGUI();
-      document.body.appendChild(stats.dom);
-
-      return { renderer, scene, camera, composer, observer, cameraControl, bloomPass, uniforms, stats };
+      return { renderer, scene, camera, composer, observer, cameraControl, bloomPass, uniforms };
     } catch (error) {
       console.error('Error in initializeScene:', error);
       return null;
@@ -113,24 +131,19 @@ const BlackHole = ({ scrollPosition }) => {
       const animationFrame = () => {
         requestAnimationFrame(animationFrame);
         
-        if (!observerRef.current || !uniformsRef.current || !effectConfigRef.current || !bloomConfigRef.current || !cameraConfigRef.current || !composerRef.current) {
+        if (!observerRef.current || !uniformsRef.current || !configRef.current || !composerRef.current) {
           return;
         }
 
-        const stats = createStatsGUI();
-        stats.begin();
-
         const uniforms = uniformsRef.current;
         const observer = observerRef.current;
-        const effectConfig = effectConfigRef.current;
-        const bloomConfig = bloomConfigRef.current;
-        const cameraConfig = cameraConfigRef.current;
+        const { effectConfig, bloomConfig, cameraConfig } = configRef.current;
         const composer = composerRef.current;
 
         uniforms.time.value += 0.01;
         observer.update(0.016);
 
-        uniforms.bg_offset.value.x += 0.0001; // Adjust these values to control the speed of movement
+        uniforms.bg_offset.value.x += 0.0001;
         uniforms.bg_offset.value.y += 0.0001;
 
         uniforms.cam_pos.value.copy(observer.position);
@@ -139,7 +152,7 @@ const BlackHole = ({ scrollPosition }) => {
         uniforms.cam_vel.value.copy(observer.velocity);
         uniforms.fov.value = observer.fov;
 
-        // Update uniforms based on GUI values
+        // Update uniforms based on config values
         uniforms.accretion_disk.value = effectConfig.accretion_disk;
         uniforms.use_disk_texture.value = effectConfig.use_disk_texture;
         uniforms.doppler_shift.value = effectConfig.doppler_shift;
@@ -156,8 +169,6 @@ const BlackHole = ({ scrollPosition }) => {
         observer.updateProjectionMatrix();
 
         composer.render();
-
-        stats.end();
       };
 
       animationFrame();
@@ -188,14 +199,11 @@ const BlackHole = ({ scrollPosition }) => {
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      if (sceneObjects && sceneObjects.stats) {
-        document.body.removeChild(sceneObjects.stats.dom);
-      }
     };
   }, [initializeScene, animate]);
 
   useEffect(() => {
-    if (observerRef.current && cameraConfigRef.current) {
+    if (observerRef.current && configRef.current) {
       const minDistance = 2;
       const maxDistance = 14;
       const scrollRange = 1000;
@@ -203,15 +211,13 @@ const BlackHole = ({ scrollPosition }) => {
       const newDistance = maxDistance - (scrollPosition / scrollRange) * (maxDistance - minDistance);
       
       observerRef.current.distance = Math.min(Math.max(newDistance, minDistance), maxDistance);
-      cameraConfigRef.current.distance = observerRef.current.distance;
+      configRef.current.cameraConfig.distance = observerRef.current.distance;
     }
   }, [scrollPosition]);
 
   return (
     <div>
       <canvas ref={canvasRef} style={{ width: '100%', height: '100vh' }} />
-      <div style={{ position: 'absolute', top: 10, left: 10, color: 'white', backgroundColor: 'rgba(0,0,0,0.5)', padding: '5px' }}>
-      </div>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState, useRef } from 'react'
-import { TweetGrid } from "@/components/cult/tweet-grid"
 import LandingPageLayout from "./_layout"
 import { Projects } from "./_sections/features"
 import { BlackHoleHero } from "./_sections/hero"
@@ -11,7 +10,10 @@ export default function LandingPage() {
   const [scrollPosition, setScrollPosition] = useState(0)
   const [showOtherSections, setShowOtherSections] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
-  const SCROLL_THRESHOLD = 1700
+  const timelineDemoRef = useRef<HTMLDivElement>(null)
+
+  const SCROLL_THRESHOLD = 1900
+  const TIMELINE_APPEAR_THRESHOLD = SCROLL_THRESHOLD - 10 // Adjust as needed
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +22,6 @@ export default function LandingPage() {
 
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       const newScrollPosition = Math.min(scrollTop, SCROLL_THRESHOLD)
-      
       setScrollPosition(newScrollPosition)
 
       if (scrollTop > SCROLL_THRESHOLD && !showOtherSections) {
@@ -39,25 +40,37 @@ export default function LandingPage() {
   }, [showOtherSections])
 
   return (
-    <div style={{ height: '300vh' }}> {/* Adjust total height as needed */}
-      <div ref={containerRef} style={{ 
-        position: 'fixed', 
-        top: 0, 
-        left: 0, 
-        width: '100%', 
+    <div style={{ height: '500vh' }}> {/* Adjust total height as needed */}
+      <div ref={containerRef} style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
         height: '100vh',
         zIndex: 10
       }}>
         <BlackHoleHero scrollPosition={scrollPosition} />
       </div>
-      <div style={{ 
-        position: 'absolute', 
-        top: `${SCROLL_THRESHOLD}px`, 
-        left: 0, 
+      <div
+        ref={timelineDemoRef}
+        style={{
+          position: 'absolute',
+          top: `${TIMELINE_APPEAR_THRESHOLD}px`,
+          left: 0,
+          width: '100%',
+          zIndex: 20
+        }}
+      >
+        <TimelineDemo />
+      </div>
+      <div style={{
+        position: 'absolute',
+        top: `${SCROLL_THRESHOLD}px`,
+        left: 0,
         width: '100%'
       }}>
         <LandingPageLayout
-          feature={<TimelineDemo />}
+          feature={<Projects />}
           price={<Pricing />}
         />
       </div>

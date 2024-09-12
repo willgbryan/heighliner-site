@@ -1,18 +1,7 @@
 "use client"
 import { Suspense, useEffect, useRef, useState } from "react"
-import { motion } from "framer-motion"
-import { GradientHeading } from "@/components/cult/gradient-heading"
-import TextAnimate from "@/components/cult/text-animate"
-import { FAQ } from "@/components/faq"
-import { Navbar } from "@/components/navbar"
-import { LinkPreview } from "@/components/system-link"
+import { motion, useAnimation } from "framer-motion"
 import { ThemeProvider } from 'next-themes'
-
-let tabs = [
-  { id: "hero", label: "Hero" },
-  { id: "feature", label: "Feature" },
-  { id: "price", label: "Price" },
-]
 
 export default function LandingPageLayout({
   hero,
@@ -23,97 +12,117 @@ export default function LandingPageLayout({
   feature: React.ReactNode;
   price: React.ReactNode;
 }) {
-  const [activeSection, setActiveSection] = useState(tabs[0].id)
+  const containerRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLElement>(null)
   const featureRef = useRef<HTMLElement>(null)
   const priceRef = useRef<HTMLElement>(null)
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [showOtherSections, setShowOtherSections] = useState(false)
+  const controls = useAnimation()
 
-  const sectionRefs = {
-    hero: heroRef,
-    feature: featureRef,
-    price: priceRef,
-  }
+  const SCROLL_THRESHOLD = 1900
+  const TIMELINE_APPEAR_THRESHOLD = SCROLL_THRESHOLD - 100
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
+    const handleScroll = () => {
+      const container = containerRef.current
+      if (!container) return
 
-    Object.values(sectionRefs).forEach((ref) => {
-      if (ref.current) {
-        observer.observe(ref.current)
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      const newScrollPosition = Math.min(scrollTop, SCROLL_THRESHOLD)
+      setScrollPosition(newScrollPosition)
+
+      if (scrollTop > TIMELINE_APPEAR_THRESHOLD) {
+        const progress = (scrollTop - TIMELINE_APPEAR_THRESHOLD) / (SCROLL_THRESHOLD - TIMELINE_APPEAR_THRESHOLD)
+        controls.start({ opacity: progress, y: 50 * (1 - progress) })
+      } else {
+        controls.start({ opacity: 0, y: 50 })
       }
-    })
 
+      if (scrollTop > SCROLL_THRESHOLD && !showOtherSections) {
+        setShowOtherSections(true)
+        container.style.position = 'relative'
+      } else if (scrollTop <= SCROLL_THRESHOLD && showOtherSections) {
+        setShowOtherSections(false)
+        container.style.position = 'fixed'
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      Object.values(sectionRefs).forEach((ref) => {
-        if (ref.current) {
-          observer.unobserve(ref.current)
-        }
-      })
+      window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
-
-  const handleCtaClick = (id: string) => {
-    const section = document.querySelector(`#price`)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
-      setActiveSection("3")
-    }
-  }
+  }, [showOtherSections, controls])
 
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
-    <>
-      <header className="fixed top-0 left-0 right-0 z-[9999]">
-        <motion.div
-          initial={{ opacity: 0, y: -120 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 120 }}
-          transition={{ duration: 1.6, delay: 0.9, type: "spring" }}
-          className="flex items-center justify-between px-10 py-4"
-        >
-          <div className="flex items-center">
-            <p className="text-stone-100 dark:text-neutral-400 text-xl md:text-3xl">
-              Heighliner
-            </p>
-          </div>
-          <div className="">
-            <Navbar activeSection={activeSection} />
-          </div>
-        </motion.div>
-      </header>
-      <main className="bg-[#e4e4e4] overflow-hidden">
-        {hero && (
-          <section id="hero" ref={heroRef}>
-            <div className="h-[900px]">{hero}</div>
-          </section>
-        )}
-        <section id="feature" ref={featureRef} className="z-10">
-          <div className="py-9">
-            <div className="">{feature}</div>
-          </div>
-        </section>
-        <div className=""></div>
-        <div className="relative h-full rounded-t-[4rem]">
-          <section id="price" ref={priceRef}>
-            <div className="w-full h-full md:h-[700px]">{price}</div>
-          </section>
+      <div style={{ height: '300vh' }}>
+        <header className="fixed top-0 left-0 right-0 z-[9999]">
+          <motion.div
+            initial={{ opacity: 0, y: -120 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 120 }}
+            transition={{ duration: 1.6, delay: 0.9, type: "spring" }}
+            className="flex items-center justify-between px-10 py-4"
+          >
+            <div className="flex items-center">
+              <p className="text-stone-100 dark:text-neutral-400 text-xl md:text-3xl">
+                Heighliner
+              </p>
+            </div>
+          </motion.div>
+        </header>
+
+        <div ref={containerRef} style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100vh',
+          zIndex: 10
+        }}>
+          {hero && (
+            <section id="hero" ref={heroRef}>
+              <div className="h-[900px]">{hero}</div>
+            </section>
+          )}
         </div>
-        <section className="relative">
-          <div className="w-full h-full">
-            <FAQ />
-          </div>
-        </section>
-      </main>
-    </>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={controls}
+          transition={{ duration: 0.5 }}
+          style={{
+            position: 'absolute',
+            top: `${TIMELINE_APPEAR_THRESHOLD}px`,
+            left: 0,
+            width: '100%',
+            zIndex: 20
+          }}
+        >
+          {/* You can add your TimelineDemo component here if needed */}
+        </motion.div>
+
+        <div style={{
+          position: 'absolute',
+          top: `${SCROLL_THRESHOLD}px`,
+          left: 0,
+          width: '100%'
+        }}>
+          <main className="bg-[#e4e4e4] overflow-hidden">
+            <section id="feature" ref={featureRef} className="z-10">
+              <div className="py-9">
+                <div className="">{feature}</div>
+              </div>
+            </section>
+            {price && (
+              <section id="price" ref={priceRef}>
+                {price}
+              </section>
+            )}
+          </main>
+        </div>
+      </div>
     </ThemeProvider>
   )
 }
