@@ -206,3 +206,13 @@
   border-left: none;
   border-top: none;
 }
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  html {
+    @apply dark;
+  }
+}

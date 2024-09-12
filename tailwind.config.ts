@@ -173,7 +173,15 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function({ addBase, theme }) {
+      addBase({
+        'body': { backgroundColor: theme('colors.background'), color: theme('colors.foreground') },
+      })
+    },
+  ],
+  
 }
 
 function addVariablesForColors({ addBase, theme }: any) {

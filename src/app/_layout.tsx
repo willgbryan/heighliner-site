@@ -6,6 +6,7 @@ import TextAnimate from "@/components/cult/text-animate"
 import { FAQ } from "@/components/faq"
 import { Navbar } from "@/components/navbar"
 import { LinkPreview } from "@/components/system-link"
+import { ThemeProvider } from 'next-themes'
 
 let tabs = [
   { id: "hero", label: "Hero" },
@@ -69,6 +70,7 @@ export default function LandingPageLayout({
   }
 
   return (
+    <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
     <>
       <header className="fixed top-0 left-0 right-0 z-[9999]">
         <motion.div
@@ -112,5 +114,6 @@ export default function LandingPageLayout({
         </section>
       </main>
     </>
+    </ThemeProvider>
   )
 }

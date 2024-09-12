@@ -5,6 +5,7 @@ import LandingPageLayout from "./_layout"
 import { Projects } from "./_sections/features"
 import { BlackHoleHero } from "./_sections/hero"
 import { Pricing } from "./_sections/price"
+import { TimelineDemo } from './_sections/core'
 
 export default function LandingPage() {
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -56,7 +57,7 @@ export default function LandingPage() {
         width: '100%'
       }}>
         <LandingPageLayout
-          feature={<Projects />}
+          feature={<TimelineDemo />}
           price={<Pricing />}
         />
       </div>
