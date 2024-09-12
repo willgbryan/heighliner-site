@@ -7,6 +7,7 @@
 
 uniform float time;
 uniform vec2 resolution;
+uniform vec2 bg_offset;
 
 uniform vec3 cam_pos;
 uniform vec3 cam_dir;
@@ -43,9 +44,14 @@ vec2 to_spherical(vec3 cartesian_coord){
   // polar angles are directly used as horizontal and vertical coordinates
   // here angle to y-axis mapped to latitude (looking vertically 180 degrees)
   // xz plane to longitude (looking horizontally 360 degrees)
-  vec2 uv = vec2(atan(cartesian_coord.z,cartesian_coord.x), asin(cartesian_coord.y)); 
+  vec2 uv = vec2(atan(cartesian_coord.z,cartesian_coord.x), asin(cartesian_coord.y));
   uv *= vec2(1.0/(2.0*PI), 1.0/PI); //long, lat
   uv += 0.5;
+  
+  uv += bg_offset;
+  
+  uv = fract(uv);
+  
   return uv;
 }
 

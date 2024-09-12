@@ -70,7 +70,7 @@ export default function LandingPageLayout({
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-[9999] bg-[#e4e4e4]/70 backdrop-blur-md">
+      <header className="fixed top-0 left-0 right-0 z-[9999]">
         <motion.div
           initial={{ opacity: 0, y: -120 }}
           animate={{ opacity: 1, y: 0 }}
@@ -79,10 +79,8 @@ export default function LandingPageLayout({
           className="flex items-center justify-between px-10 py-4"
         >
           <div className="flex items-center">
-            <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl">
-              <LinkPreview url="https://themagi.systems" className="font-normal">
-                Magi
-              </LinkPreview>
+            <p className="text-stone-100 dark:text-neutral-400 text-xl md:text-3xl">
+              Heighliner
             </p>
           </div>
           <div className="">

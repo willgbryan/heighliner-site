@@ -42,7 +42,7 @@ export function createConfigGUI(changePerformanceQuality, saveScreenshot) {
   function addCameraConfig() {
     const cameraConfig = {
       distance: 10,
-      orbit: true,
+      orbit: false,
       fov: 90.0
     }
     const observerFolder = gui.addFolder('Observer')
