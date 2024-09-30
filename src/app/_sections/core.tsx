@@ -5,7 +5,7 @@ import { Timeline } from "@/components/cult/timeline";
 export function TimelineDemo() {
   const data = [
     {
-      title: "2024",
+      title: "Open Research",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -45,7 +45,7 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "Early 2023",
+      title: "In-Document Research",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -90,7 +90,7 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "Changelog",
+      title: "Transferable Artifacts",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
