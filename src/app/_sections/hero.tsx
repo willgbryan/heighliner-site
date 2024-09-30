@@ -6,11 +6,9 @@ const BlackHole = dynamic(() => import('@/components/black-hole/black-hole'), {
 });
 
 export function BlackHoleHero({ scrollPosition }) {
-  // Define the scroll thresholds for fade-out start and end
-  const FADE_START = 400; // Start fading out at 100px scroll
-  const FADE_END = 650;   // Fully faded out at 500px scroll
+  const FADE_START = 400;
+  const FADE_END = 650;
 
-  // Calculate opacity based on scroll position
   const calculateOpacity = () => {
     if (scrollPosition <= FADE_START) return 1;
     if (scrollPosition >= FADE_END) return 0;
