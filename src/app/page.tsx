@@ -13,7 +13,7 @@ export default function LandingPage() {
   const timelineDemoRef = useRef<HTMLDivElement>(null)
 
   const SCROLL_THRESHOLD = 1900
-  const TIMELINE_APPEAR_THRESHOLD = SCROLL_THRESHOLD - 10 // Adjust as needed
+  const TIMELINE_APPEAR_THRESHOLD = SCROLL_THRESHOLD - 10
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +40,7 @@ export default function LandingPage() {
   }, [showOtherSections])
 
   return (
-    <div style={{ height: '500vh' }}> {/* Adjust total height as needed */}
+    <div style={{ height: '500vh' }}>
       <div ref={containerRef} style={{
         position: 'fixed',
         top: 0,

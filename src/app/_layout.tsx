@@ -57,21 +57,6 @@ export default function LandingPageLayout({
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
       <div style={{ height: '300vh' }}>
-        <header className="fixed top-0 left-0 right-0 z-[9999]">
-          <motion.div
-            initial={{ opacity: 0, y: -120 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 120 }}
-            transition={{ duration: 1.6, delay: 0.9, type: "spring" }}
-            className="flex items-center justify-between px-10 py-4"
-          >
-            <div className="flex items-center">
-              <p className="text-stone-100 dark:text-neutral-400 text-xl md:text-3xl">
-                Heighliner
-              </p>
-            </div>
-          </motion.div>
-        </header>
 
         <div ref={containerRef} style={{
           position: 'fixed',

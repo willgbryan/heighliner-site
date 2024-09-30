@@ -84,7 +84,7 @@ const BlackHole = ({ scrollPosition }) => {
 
       const textureLoader = new THREE.TextureLoader();
       const diskTexture = textureLoader.load('/accretion_disk.png');
-      const bgTexture = textureLoader.load('/milkyway.jpg')
+      const bgTexture = textureLoader.load('')
 
       const uniforms = {
         time: { value: 0 },
