@@ -16,6 +16,9 @@ export default function LandingPage() {
   const TIMELINE_APPEAR_THRESHOLD = SCROLL_THRESHOLD - 10
 
   useEffect(() => {
+    // Enforce dark mode
+    document.documentElement.classList.add('dark')
+
     const handleScroll = () => {
       const container = containerRef.current
       if (!container) return
@@ -37,7 +40,7 @@ export default function LandingPage() {
   }, [showOtherSections])
 
   return (
-    <div style={{ height: '400vh' }}>
+    <div className="bg-black text-white" style={{ height: '400vh' }}>
       <div ref={containerRef} style={{
         position: 'fixed',
         top: 0,
@@ -62,7 +65,7 @@ export default function LandingPage() {
       </div>
       <div style={{
         position: 'absolute',
-        top: `500vh`,
+        top: `460vh`,
         left: 0,
         width: '100%',
         zIndex: 30
