@@ -17,7 +17,7 @@ export function BottomSection() {
             Try Heighliner
           </h2>
           <Button
-            variant="ghost"
+            variant="outline"
             onClick={() => router.push('https://heighliner.tech')}
             className="text-xl px-8 text-white hover:text-gray-300 relative z-10"
           >
