@@ -5,13 +5,13 @@ import { Projects } from "./_sections/features"
 import { BlackHoleHero } from "./_sections/hero"
 import { Pricing } from "./_sections/price"
 import { TimelineDemo } from './_sections/core'
+import { BottomSection } from './_sections/bottom'
 
 export default function LandingPage() {
   const [scrollPosition, setScrollPosition] = useState(0)
   const [showOtherSections, setShowOtherSections] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const timelineDemoRef = useRef<HTMLDivElement>(null)
-
   const SCROLL_THRESHOLD = 1900
   const TIMELINE_APPEAR_THRESHOLD = SCROLL_THRESHOLD - 10
 
@@ -19,11 +19,9 @@ export default function LandingPage() {
     const handleScroll = () => {
       const container = containerRef.current
       if (!container) return
-
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       const newScrollPosition = Math.min(scrollTop, SCROLL_THRESHOLD)
       setScrollPosition(newScrollPosition)
-
       if (scrollTop > SCROLL_THRESHOLD && !showOtherSections) {
         setShowOtherSections(true)
         container.style.position = 'relative'
@@ -32,7 +30,6 @@ export default function LandingPage() {
         container.style.position = 'fixed'
       }
     }
-
     window.addEventListener('scroll', handleScroll)
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -40,7 +37,7 @@ export default function LandingPage() {
   }, [showOtherSections])
 
   return (
-    <div style={{ height: '500vh' }}>
+    <div style={{ height: '400vh' }}>
       <div ref={containerRef} style={{
         position: 'fixed',
         top: 0,
@@ -65,14 +62,12 @@ export default function LandingPage() {
       </div>
       <div style={{
         position: 'absolute',
-        top: `${SCROLL_THRESHOLD}px`,
+        top: `500vh`,
         left: 0,
-        width: '100%'
+        width: '100%',
+        zIndex: 30
       }}>
-        <LandingPageLayout
-          feature={<Projects />}
-          price={<Pricing />}
-        />
+        <BottomSection />
       </div>
     </div>
   )
