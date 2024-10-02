@@ -13,7 +13,7 @@ export function BottomSection() {
     <div className="min-h-screen flex flex-col bg-black text-white">
       <div className="flex-grow flex flex-col items-center justify-center relative">
         <div className="h-[40rem] flex flex-col items-center justify-center w-full relative">
-          <h2 className="relative z-10 text-3xl md:text-5xl md:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-white to-white mb-8">
+          <h2 className="relative z-10 text-3xl md:text-5xl md:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium bg-clip-text mb-8">
             Try Heighliner
           </h2>
           <Button

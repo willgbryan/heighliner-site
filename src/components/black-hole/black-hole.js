@@ -59,11 +59,17 @@ const BlackHole = ({ scrollPosition }) => {
         return null;
       }
 
-      const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
+      const renderer = new THREE.WebGLRenderer({
+        canvas: canvasRef.current,
+        alpha: true,
+        antialias: true,
+      });
+      renderer.setClearColor(0x000000, 0);
       renderer.setSize(window.innerWidth, window.innerHeight);
       rendererRef.current = renderer;
 
       const scene = new THREE.Scene();
+      scene.background = null;
       sceneRef.current = scene;
       const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
       cameraRef.current = camera;
@@ -217,7 +223,10 @@ const BlackHole = ({ scrollPosition }) => {
 
   return (
     <div>
-      <canvas ref={canvasRef} style={{ width: '100%', height: '100vh' }} />
+      <canvas
+        ref={canvasRef}
+        style={{ width: '100%', height: '100vh', background: 'transparent' }}
+      />
     </div>
   );
 };
