@@ -31,7 +31,7 @@ export function BottomSection() {
       <footer className="w-full py-8 px-4 border-t border-stone-800 relative z-10">
         <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-center">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h3 className="text-xl font-bold mb-2">Heighliner</h3>
+            <h3 className="text-xl font-thin mb-2">Heighliner</h3>
             <p className="text-sm text-gray-400">Legal Research Modernized</p>
           </div>
           {/* <div className="w-full md:w-1/3 mb-6 md:mb-0">
