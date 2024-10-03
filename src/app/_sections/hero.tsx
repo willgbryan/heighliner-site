@@ -29,23 +29,25 @@ export function BlackHoleHero({ scrollPosition }) {
       <div className="absolute inset-0 z-20">
         <BlackHole scrollPosition={scrollPosition} />
       </div>
-      <div 
-        className="absolute z-30 md:top-0 md:left-0 top-[15%] left-[19%] transition-opacity duration-300"
+      <div
+        className="absolute z-30 top-[15%] left-[19%] md:top-0 md:left-0 transition-opacity duration-300"
         style={{ opacity: textOpacity }}
       >
         <h1 className="text-[10vw] font-thin text-white leading-none m-0 p-0 shadow-glow">
           HEIGHLINER
         </h1>
       </div>
-      <div 
-        className="absolute z-30 md:bottom-0 md:right-0 bottom-[78%] right-[31%] text-right transition-opacity duration-300"
+      <div
+        className="absolute z-30 bottom-[78%] right-[31%] md:bottom-0 md:right-0 text-right transition-opacity duration-300"
         style={{ opacity: textOpacity }}
       >
-        <h2 className="text-[2.5vw] md:text-[2.5vw] font-thin text-white whitespace-nowrap m-0 p-0 shadow-glow">
+        <h2 className="text-[2.5vw] font-thin text-white whitespace-nowrap m-0 p-0 shadow-glow">
           LEGAL RESEARCH MODERNIZED
         </h2>
       </div>
-      <AnimatedChevron />
+      <div className="hidden md:block">
+        <AnimatedChevron />
+      </div>
     </div>
   );
 }
