@@ -1,4 +1,4 @@
-"use client";
+import React from 'react';
 import dynamic from 'next/dynamic';
 import { ShootingStars } from '@/components/cult/shooting-stars';
 import { StarsBackground } from '@/components/cult/stars-background';
@@ -21,67 +21,27 @@ export function BlackHoleHero({ scrollPosition }) {
   const textOpacity = calculateOpacity();
 
   return (
-    <div
-      style={{
-        width: '100vw',
-        height: '100vh',
-        position: 'relative',
-        overflow: 'hidden',
-      }}
-    >
-      <div style={{ position: 'absolute', inset: 0, zIndex: 1 }}>
+    <div className="relative w-screen h-screen overflow-hidden">
+      <div className="absolute inset-0 z-10">
         <ShootingStars />
         <StarsBackground />
       </div>
-      <div style={{ position: 'absolute', inset: 0, zIndex: 2 }}>
+      <div className="absolute inset-0 z-20">
         <BlackHole scrollPosition={scrollPosition} />
       </div>
-      <div
-        style={{
-          position: 'absolute',
-          top: '0%',
-          left: '0%',
-          zIndex: 3,
-          opacity: textOpacity,
-          transition: 'opacity 0.3s ease-out',
-        }}
+      <div 
+        className="absolute z-30 md:top-0 md:left-0 top-[15%] left-[19%] transition-opacity duration-300"
+        style={{ opacity: textOpacity }}
       >
-        <h1
-          style={{
-            fontSize: '10vw',
-            fontWeight: 'thin',
-            color: 'white',
-            textShadow: '0 0 10px rgba(255,255,255,0.5)',
-            margin: 0,
-            padding: 0,
-            lineHeight: 1,
-          }}
-        >
+        <h1 className="text-[10vw] font-thin text-white leading-none m-0 p-0 shadow-glow">
           HEIGHLINER
         </h1>
       </div>
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '2%',
-          right: '2%',
-          zIndex: 3,
-          textAlign: 'right',
-          opacity: textOpacity,
-          transition: 'opacity 0.3s ease-out',
-        }}
+      <div 
+        className="absolute z-30 md:bottom-0 md:right-0 bottom-[78%] right-[31%] text-right transition-opacity duration-300"
+        style={{ opacity: textOpacity }}
       >
-        <h2
-          style={{
-            fontSize: '2.5vw',
-            fontWeight: 'thin',
-            color: 'white',
-            textShadow: '0 0 10px rgba(255,255,255,0.5)',
-            margin: 0,
-            padding: 0,
-            whiteSpace: 'nowrap',
-          }}
-        >
+        <h2 className="text-[2.5vw] md:text-[2.5vw] font-thin text-white whitespace-nowrap m-0 p-0 shadow-glow">
           LEGAL RESEARCH MODERNIZED
         </h2>
       </div>
