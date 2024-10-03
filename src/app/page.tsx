@@ -43,13 +43,12 @@ export default function LandingPage() {
   }, [showOtherSections])
 
   return (
-    <div className="bg-black text-white" style={{ height: '400vh' }}>
+    <div className="bg-black text-white flex flex-col">
       <div ref={containerRef} style={{
         position: 'fixed',
         top: 0,
         left: 0,
         width: '100%',
-        height: '100vh',
         zIndex: 10
       }}>
         <BlackHoleHero scrollPosition={scrollPosition} />

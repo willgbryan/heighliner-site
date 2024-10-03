@@ -85,7 +85,6 @@ export default function LandingPageLayout({
             zIndex: 20
           }}
         >
-          {/* You can add your TimelineDemo component here if needed */}
         </motion.div>
 
         <div style={{
@@ -94,18 +93,6 @@ export default function LandingPageLayout({
           left: 0,
           width: '100%'
         }}>
-          <main className="bg-[#e4e4e4] overflow-hidden">
-            <section id="feature" ref={featureRef} className="z-10">
-              <div className="py-9">
-                <div className="">{feature}</div>
-              </div>
-            </section>
-            {price && (
-              <section id="price" ref={priceRef}>
-                {price}
-              </section>
-            )}
-          </main>
         </div>
       </div>
     </ThemeProvider>
