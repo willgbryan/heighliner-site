@@ -16,6 +16,7 @@ export default function LandingPage() {
 
   const SCROLL_THRESHOLD = 2500
   const TIMELINE_APPEAR_THRESHOLD = SCROLL_THRESHOLD - 10
+  const EXTRA_SPACE = 0
 
   useEffect(() => {
     // Enforce dark mode
@@ -39,7 +40,6 @@ export default function LandingPage() {
     }
 
     window.addEventListener('scroll', handleScroll)
-
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
@@ -51,16 +51,20 @@ export default function LandingPage() {
       const bottomSection = bottomSectionRef.current
       if (timelineDemo && bottomSection) {
         const timelineDemoRect = timelineDemo.getBoundingClientRect()
-        const bottomSectionTop = TIMELINE_APPEAR_THRESHOLD + timelineDemoRect.height
+        const bottomSectionTop = TIMELINE_APPEAR_THRESHOLD + timelineDemoRect.height + EXTRA_SPACE
         bottomSection.style.top = `${bottomSectionTop}px`
       }
     }
 
     positionBottomSection()
+
+    const timeoutId = setTimeout(positionBottomSection, 1000)
+
     window.addEventListener('resize', positionBottomSection)
 
     return () => {
       window.removeEventListener('resize', positionBottomSection)
+      clearTimeout(timeoutId)
     }
   }, [])
 
@@ -87,7 +91,7 @@ export default function LandingPage() {
         ref={timelineDemoRef}
         style={{
           position: 'absolute',
-          top: `${TIMELINE_APPEAR_THRESHOLD + 50}px`,
+          top: `${TIMELINE_APPEAR_THRESHOLD}px`,
           left: 0,
           width: '100%',
           zIndex: 20
