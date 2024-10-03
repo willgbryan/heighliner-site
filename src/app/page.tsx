@@ -14,7 +14,7 @@ export default function LandingPage() {
   const timelineDemoRef = useRef<HTMLDivElement>(null)
   const bottomSectionRef = useRef<HTMLDivElement>(null)
 
-  const SCROLL_THRESHOLD = 1900
+  const SCROLL_THRESHOLD = 2500
   const TIMELINE_APPEAR_THRESHOLD = SCROLL_THRESHOLD - 10
 
   useEffect(() => {
