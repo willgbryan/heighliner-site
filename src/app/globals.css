@@ -135,9 +135,9 @@
 
 @font-face {
   font-family: 'BaruSans';
-  src: url('/fonts/BaruSansWOFF/BaruSansDemo-Light.woff') format('woff'),
-       url('/fonts/BaruSansOTF/BaruSansDemo-Light.otf') format('opentype'),
-       url('/fonts/BaruSansTTF/BaruSansDemo-Light.ttf') format('truetype');
+  src: url('/fonts/BaruSansWOFF/BaruSans-Light.woff') format('woff'),
+       url('/fonts/BaruSansOTF/BaruSans-Light.otf') format('opentype'),
+       url('/fonts/BaruSansTTF/BaruSans-Light.ttf') format('truetype');
   font-weight: thin;
   font-style: normal;
   font-display: swap;
@@ -145,9 +145,9 @@
 
 @font-face {
   font-family: 'BaruSans';
-  src: url('/fonts/BaruSansOTF/BaruSansDemo-Regular.otf') format('opentype'),
-       url('/fonts/BaruSansWOFF/BaruSansDemo-Regular.woff') format('woff'),
-       url('/fonts/BaruSansTTF/BaruSansDemo-Regular.ttf') format('truetype');
+  src: url('/fonts/BaruSansOTF/BaruSans-Regular.otf') format('opentype'),
+       url('/fonts/BaruSansWOFF/BaruSans-Regular.woff') format('woff'),
+       url('/fonts/BaruSansTTF/BaruSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -155,9 +155,9 @@
 
 @font-face {
   font-family: 'BaruSans';
-  src: url('/fonts/BaruSansOTF/BaruSansDemo-Bold.otf') format('opentype'),
-       url('/fonts/BaruSansWOFF/BaruSansDemo-Bold.woff') format('woff'),
-       url('/fonts/BaruSansTTF/BaruSansDemo-Bold.ttf') format('truetype');
+  src: url('/fonts/BaruSansOTF/BaruSans-Bold.otf') format('opentype'),
+       url('/fonts/BaruSansWOFF/BaruSans-Bold.woff') format('woff'),
+       url('/fonts/BaruSansTTF/BaruSans-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -205,4 +205,14 @@
   right: -2px;
   border-left: none;
   border-top: none;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  html {
+    @apply dark;
+  }
 }
