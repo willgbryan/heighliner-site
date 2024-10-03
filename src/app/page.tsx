@@ -1,7 +1,6 @@
 "use client"
 import { useEffect, useState, useRef } from 'react'
 import LandingPageLayout from "./_layout"
-import { Projects } from "./_sections/features"
 import { BlackHoleHero } from "./_sections/hero"
 import { Pricing } from "./_sections/price"
 import { TimelineDemo } from './_sections/core'
