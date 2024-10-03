@@ -17,7 +17,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       {/* Content Wrapper */}
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-          <h2 className="text-xl md:text-8xl mb-4 text-white max-w-4xl text-left">
+          <h2 className="text-4xl md:text-8xl mb-4 text-white max-w-4xl text-left">
             A NEW TAKE ON OLD PRACTICES
           </h2>
           <p className="text-neutral-300 md:text-3xl text-xl max-w-3xl text-left">
