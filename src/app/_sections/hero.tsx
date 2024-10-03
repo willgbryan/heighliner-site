@@ -2,6 +2,7 @@
 import dynamic from 'next/dynamic';
 import { ShootingStars } from '@/components/cult/shooting-stars';
 import { StarsBackground } from '@/components/cult/stars-background';
+import AnimatedChevron from '@/components/animated-chevron';
 
 const BlackHole = dynamic(() => import('@/components/black-hole/black-hole'), {
   ssr: false,
@@ -84,6 +85,7 @@ export function BlackHoleHero({ scrollPosition }) {
           LEGAL RESEARCH MODERNIZED
         </h2>
       </div>
+      <AnimatedChevron />
     </div>
   );
 }

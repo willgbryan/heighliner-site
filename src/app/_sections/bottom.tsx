@@ -19,7 +19,7 @@ export function BottomSection() {
           <Button
             variant="outline"
             onClick={() => router.push('https://heighliner.tech')}
-            className="text-xl px-8 text-white hover:text-gray-300 relative z-10"
+            className="text-xl px-8 text-white hover:text-gray-300 relative z-10 rounded-sm"
           >
             Launch
           </Button>
@@ -34,7 +34,7 @@ export function BottomSection() {
             <h3 className="text-xl font-bold mb-2">Heighliner</h3>
             <p className="text-sm text-gray-400">Legal Research Modernized</p>
           </div>
-          <div className="w-full md:w-1/3 mb-6 md:mb-0">
+          {/* <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h4 className="text-lg font-semibold mb-2">Quick Links</h4>
             <ul className="text-sm">
               <li><a href="#" className="hover:text-gray-300">About Us</a></li>
@@ -42,15 +42,15 @@ export function BottomSection() {
               <li><a href="#" className="hover:text-gray-300">Pricing</a></li>
               <li><a href="#" className="hover:text-gray-300">Contact</a></li>
             </ul>
-          </div>
+          </div> */}
           <div className="w-full md:w-1/3 flex justify-center md:justify-end">
-            <a href="#" className="mx-2 hover:text-gray-300">
+            {/* <a href="#" className="mx-2 hover:text-gray-300">
               <Github size={24} />
             </a>
             <a href="#" className="mx-2 hover:text-gray-300">
               <Twitter size={24} />
-            </a>
-            <a href="#" className="mx-2 hover:text-gray-300">
+            </a> */}
+            <a href="https://linkedin.com/company/heighlinerai" className="mx-2 hover:text-gray-300">
               <Linkedin size={24} />
             </a>
           </div>
