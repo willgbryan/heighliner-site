@@ -87,7 +87,7 @@ export default function LandingPage() {
         ref={timelineDemoRef}
         style={{
           position: 'absolute',
-          top: `${TIMELINE_APPEAR_THRESHOLD}px`,
+          top: `${TIMELINE_APPEAR_THRESHOLD + 50}px`,
           left: 0,
           width: '100%',
           zIndex: 20
