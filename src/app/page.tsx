@@ -12,6 +12,8 @@ export default function LandingPage() {
   const [showOtherSections, setShowOtherSections] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const timelineDemoRef = useRef<HTMLDivElement>(null)
+  const bottomSectionRef = useRef<HTMLDivElement>(null)
+
   const SCROLL_THRESHOLD = 1900
   const TIMELINE_APPEAR_THRESHOLD = SCROLL_THRESHOLD - 10
 
@@ -37,10 +39,30 @@ export default function LandingPage() {
     }
 
     window.addEventListener('scroll', handleScroll)
+
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [showOtherSections])
+
+  useEffect(() => {
+    const positionBottomSection = () => {
+      const timelineDemo = timelineDemoRef.current
+      const bottomSection = bottomSectionRef.current
+      if (timelineDemo && bottomSection) {
+        const timelineDemoRect = timelineDemo.getBoundingClientRect()
+        const bottomSectionTop = TIMELINE_APPEAR_THRESHOLD + timelineDemoRect.height
+        bottomSection.style.top = `${bottomSectionTop}px`
+      }
+    }
+
+    positionBottomSection()
+    window.addEventListener('resize', positionBottomSection)
+
+    return () => {
+      window.removeEventListener('resize', positionBottomSection)
+    }
+  }, [])
 
   return (
     <div className="bg-black text-white flex flex-col">
@@ -53,7 +75,6 @@ export default function LandingPage() {
       }}>
         <BlackHoleHero scrollPosition={scrollPosition} />
       </div>
-      
       <div style={{
         position: 'fixed',
         top: '1rem',
@@ -62,7 +83,6 @@ export default function LandingPage() {
       }}>
         <Nav />
       </div>
-
       <div
         ref={timelineDemoRef}
         style={{
@@ -75,13 +95,15 @@ export default function LandingPage() {
       >
         <TimelineDemo />
       </div>
-      <div style={{
-        position: 'absolute',
-        top: `460vh`,
-        left: 0,
-        width: '100%',
-        zIndex: 30
-      }}>
+      <div
+        ref={bottomSectionRef}
+        style={{
+          position: 'absolute',
+          left: 0,
+          width: '100%',
+          zIndex: 30
+        }}
+      >
         <BottomSection />
       </div>
     </div>
