@@ -174,7 +174,7 @@ const MobileNav = ({ navItems, visible }: NavbarProps) => {
   const [open, setOpen] = useState(false);
 
   const calOptions = useCalEmbed({
-    namespace: "chat-with-manu-demo",
+    namespace: "30min",
     styles: {
       branding: {
         brandColor: "#000000",
