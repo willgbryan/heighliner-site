@@ -29,10 +29,10 @@ export const Navbar = () => {
       name: "Features",
       link: "/#features",
     },
-    {
-      name: "Pricing",
-      link: "/#pricing",
-    },
+    // {
+    //   name: "Pricing",
+    //   link: "/#pricing",
+    // },
     {
       name: "Contact",
       link: "/#contact",
