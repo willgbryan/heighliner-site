@@ -254,7 +254,7 @@ const MobileNav = ({ navItems, visible }: NavbarProps) => {
               </Button> */}
               <Button
                 data-cal-namespace={calOptions.namespace}
-                data-cal-link={`manu-arora-vesr9s/chat-with-manu-demo`}
+                data-cal-link={`will-bryan-82m9ul/30min`}
                 data-cal-config={`{"layout":"${calOptions.layout}"}`}
                 as="button"
                 onClick={() => setOpen(false)}
