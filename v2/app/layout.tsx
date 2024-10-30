@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   description:
     "Heighliner is legal search engine purpose built for compiling quality resources to help legal professionals kickstart their legal research processes.",
   keywords: ['Heighliner', 'Legal search engine', 'document analysis', 'word document exports'],
-  authors: [{ name: 'Will' }],
-  creator: 'Will',
+  authors: [{ name: 'Heighliner' }],
+  creator: 'Heighliner',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Heighliner',
-    description: 'Legal research modernized',
+    description: 'Legal research starts here',
     images: ['https://s.yimg.com/ny/api/res/1.2/6YLkalF05.eeHi15u_0_.w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTMyMA--/https://o.aolcdn.com/hss/storage/midas/29cdfcf2bb2af26b103c432d02cbe5e2/205180329/TN-JPL1978-300dpi-ed2.jpg'],
   },
   icons: {
