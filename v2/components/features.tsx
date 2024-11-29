@@ -20,7 +20,7 @@ export function Features() {
       <p className="max-w-md md:max-w-xl text-sm text-neutral-600 text-center mx-auto mt-4 dark:text-neutral-400">
         Heighliner compliments your team's existing legal database. Semantic searches uncover the best cases to investigate via Westlaw or LexisNexis.
       </p>
-      <div className="mt-20  grid cols-1 md:grid-cols-5 gap-4 md:auto-rows-[25rem] max-w-7xl mx-auto">
+      <div className="mt-20 grid cols-1 md:grid-cols-5 gap-4 md:auto-rows-[25rem] max-w-7xl mx-auto">
         <Card className="flex flex-col justify-between md:col-span-3">
           <CardSkeletonBody>
             <SkeletonOne />
@@ -41,13 +41,33 @@ export function Features() {
             </CardDescription>
           </CardContent>
           <CardSkeletonBody>
-            <div className="w-full h-full p-4 rounded-lg bg-neutral-100 border border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700 ml-6 mt-2">
+            <div className="w-full h-full p-4 rounded-lg bg-neutral-100 border border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700 ml-6 mt-2 overflow-hidden">
               <video
                 src="/videos/export_demo.mp4"
-                width={500}
-                height={500}
-                className="w-full object-cover rounded-lg"
+                className="w-full h-full object-cover rounded-lg"
                 autoPlay
+                controls
+              />
+            </div>
+          </CardSkeletonBody>
+        </Card>
+
+        <Card className="flex flex-col justify-between md:col-span-5">
+          <CardContent className="h-60">
+            <CardTitle>Self Service Contract Review</CardTitle>
+            <CardDescription className="max-w-lg">
+              Upload contracts, describe your policy requirements or desired changes, and free form edit with Heighliner to draft new versions.
+            </CardDescription>
+          </CardContent>
+          <CardSkeletonBody>
+            <div className="w-full h-full p-4 rounded-lg bg-neutral-100 border border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700 ml-6 overflow-hidden">
+              <video
+                src="/videos/contract-review.mp4"
+                className="w-full h-full object-cover rounded-lg"
+                autoPlay
+                muted
+                loop
+                playsInline
                 controls
               />
             </div>
@@ -73,10 +93,10 @@ export function Features() {
             </CardDescription>
           </CardContent>
           <CardSkeletonBody>
-            <div className="w-full h-full p-4 rounded-lg bg-neutral-100 border border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700 ml-6 mt-2">
+            <div className="w-full h-full p-4 rounded-lg bg-neutral-100 border border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700 ml-6 mt-2 overflow-hidden">
               <video
                 src="/videos/doc_analysis_demo.mp4"
-                className="w-full object-cover rounded-lg"
+                className="w-full h-full object-cover rounded-lg"
                 autoPlay
                 muted
                 loop
